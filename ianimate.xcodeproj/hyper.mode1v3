@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>2B8F20190F9C03E700A62EB6</string>
+						<string>2B8F20450F9C090E00A62EB6</string>
 						<key>history</key>
 						<array>
 							<string>2B8F1F680F9BF42D00A62EB6</string>
@@ -252,7 +252,7 @@
 				<key>PBXModuleWindowStatusBarHidden2</key>
 				<false/>
 				<key>RubberWindowFrame</key>
-				<string>140 96 1154 722 0 0 1344 818 </string>
+				<string>75 94 1154 722 0 0 1344 818 </string>
 			</dict>
 		</dict>
 	</array>
@@ -325,6 +325,7 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>2B64626B0F9AE18600B8B23D</string>
 								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>29B97323FDCFA39411CA2CEA</string>
 								<string>19C28FACFE9D520D11CA2CBB</string>
@@ -333,7 +334,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>16</integer>
+									<integer>4</integer>
 									<integer>2</integer>
 									<integer>0</integer>
 								</array>
@@ -386,7 +387,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>2B8F20180F9C03E700A62EB6</string>
+										<string>2B8F20440F9C090E00A62EB6</string>
 										<key>history</key>
 										<array>
 											<string>2B6461FC0F9ADD6900B8B23D</string>
@@ -657,12 +658,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>2B8F201A0F9C03E700A62EB6</string>
+		<string>2B8F20460F9C090E00A62EB6</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>2B8F1E050F9BD41400A62EB6</string>
+		<string>2B3362D80F74646C00AAF6C1</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>/Users/hyper/iphone/game1/ianimate.xcodeproj</string>
-		<string>2B3362D80F74646C00AAF6C1</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>2B8F1E060F9BD41400A62EB6</string>
 		<string>2B8F1F160F9BF1C300A62EB6</string>
@@ -684,6 +685,8 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -706,8 +709,6 @@
 							<string>474pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -758,7 +759,7 @@
 			<key>WindowToolGUID</key>
 			<string>2B3362D80F74646C00AAF6C1</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>

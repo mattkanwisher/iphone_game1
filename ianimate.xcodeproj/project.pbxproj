@@ -27,6 +27,8 @@
 		2B8F1ECA0F9BEFDD00A62EB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8F1EC90F9BEFDD00A62EB6 /* AVFoundation.framework */; };
 		2B8F1EF30F9BF10300A62EB6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8F1EF20F9BF10300A62EB6 /* AudioToolbox.framework */; };
 		2B8F1F230F9BF29100A62EB6 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1F220F9BF29100A62EB6 /* Pop.aiff */; };
+		2B8F20330F9C081C00A62EB6 /* GGBLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F20300F9C081C00A62EB6 /* GGBLayer.m */; };
+		2B8F20340F9C081C00A62EB6 /* GGBTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8F20320F9C081C00A62EB6 /* GGBTextLayer.m */; };
 		2B9A8FD80F7D5FE900A9E7BB /* little-dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */; };
 		2BA78E160F746936001C5ADF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA78E150F746936001C5ADF /* back.png */; };
 		2BBAB0AE0F9AE79D00E3FC14 /* AsteroidFrontLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBAB0AD0F9AE79D00E3FC14 /* AsteroidFrontLayer.m */; };
@@ -69,6 +71,10 @@
 		2B8F1EC90F9BEFDD00A62EB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		2B8F1EF20F9BF10300A62EB6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2B8F1F220F9BF29100A62EB6 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = "<group>"; };
+		2B8F202F0F9C081C00A62EB6 /* GGBLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBLayer.h; sourceTree = "<group>"; };
+		2B8F20300F9C081C00A62EB6 /* GGBLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBLayer.m; sourceTree = "<group>"; };
+		2B8F20310F9C081C00A62EB6 /* GGBTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBTextLayer.h; sourceTree = "<group>"; };
+		2B8F20320F9C081C00A62EB6 /* GGBTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBTextLayer.m; sourceTree = "<group>"; };
 		2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "little-dude.png"; sourceTree = "<group>"; };
 		2BA78E150F746936001C5ADF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		2BBAB0AC0F9AE79D00E3FC14 /* AsteroidFrontLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsteroidFrontLayer.h; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 		2B64626B0F9AE18600B8B23D /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				2B8F202F0F9C081C00A62EB6 /* GGBLayer.h */,
+				2B8F20300F9C081C00A62EB6 /* GGBLayer.m */,
+				2B8F20310F9C081C00A62EB6 /* GGBTextLayer.h */,
+				2B8F20320F9C081C00A62EB6 /* GGBTextLayer.m */,
 				2BBAB0AC0F9AE79D00E3FC14 /* AsteroidFrontLayer.h */,
 				2BBAB0AD0F9AE79D00E3FC14 /* AsteroidFrontLayer.m */,
 				2B64629F0F9AE23700B8B23D /* ImageLayer.h */,
@@ -284,6 +294,8 @@
 				2BBAB0AE0F9AE79D00E3FC14 /* AsteroidFrontLayer.m in Sources */,
 				2BBAB2260F9AFD7A00E3FC14 /* QuartzUtils.m in Sources */,
 				2BBAB2350F9AFDCD00E3FC14 /* GGBUtils.m in Sources */,
+				2B8F20330F9C081C00A62EB6 /* GGBLayer.m in Sources */,
+				2B8F20340F9C081C00A62EB6 /* GGBTextLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,9 +30,9 @@
 	};
 	28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1095, 8442}}";
-			sepNavSelRange = "{6780, 0}";
-			sepNavVisRange = "{6324, 1499}";
+			sepNavIntBoundsRect = "{{0, 0}, {1095, 9226}}";
+			sepNavSelRange = "{430, 0}";
+			sepNavVisRange = "{158, 1219}";
 			sepNavWindowFrame = "{{61, 40}, {1154, 778}}";
 		};
 	};
@@ -358,6 +358,22 @@
 			2B8F20150F9C03B600A62EB6 /* PBXTextBookmark */ = 2B8F20150F9C03B600A62EB6 /* PBXTextBookmark */;
 			2B8F20180F9C03E700A62EB6 /* PBXTextBookmark */ = 2B8F20180F9C03E700A62EB6 /* PBXTextBookmark */;
 			2B8F20190F9C03E700A62EB6 /* PBXTextBookmark */ = 2B8F20190F9C03E700A62EB6 /* PBXTextBookmark */;
+			2B8F201C0F9C046D00A62EB6 /* PBXTextBookmark */ = 2B8F201C0F9C046D00A62EB6 /* PBXTextBookmark */;
+			2B8F201D0F9C046D00A62EB6 /* PBXTextBookmark */ = 2B8F201D0F9C046D00A62EB6 /* PBXTextBookmark */;
+			2B8F201F0F9C047400A62EB6 /* PBXTextBookmark */ = 2B8F201F0F9C047400A62EB6 /* PBXTextBookmark */;
+			2B8F20200F9C047400A62EB6 /* PBXTextBookmark */ = 2B8F20200F9C047400A62EB6 /* PBXTextBookmark */;
+			2B8F20240F9C075D00A62EB6 /* PBXTextBookmark */ = 2B8F20240F9C075D00A62EB6 /* PBXTextBookmark */;
+			2B8F20250F9C075D00A62EB6 /* PBXTextBookmark */ = 2B8F20250F9C075D00A62EB6 /* PBXTextBookmark */;
+			2B8F20270F9C077F00A62EB6 /* PBXTextBookmark */ = 2B8F20270F9C077F00A62EB6 /* PBXTextBookmark */;
+			2B8F20280F9C077F00A62EB6 /* PBXTextBookmark */ = 2B8F20280F9C077F00A62EB6 /* PBXTextBookmark */;
+			2B8F20370F9C083500A62EB6 /* PBXTextBookmark */ = 2B8F20370F9C083500A62EB6 /* PBXTextBookmark */;
+			2B8F20380F9C083500A62EB6 /* PBXTextBookmark */ = 2B8F20380F9C083500A62EB6 /* PBXTextBookmark */;
+			2B8F203A0F9C084000A62EB6 /* PBXTextBookmark */ = 2B8F203A0F9C084000A62EB6 /* PBXTextBookmark */;
+			2B8F203B0F9C084000A62EB6 /* PBXTextBookmark */ = 2B8F203B0F9C084000A62EB6 /* PBXTextBookmark */;
+			2B8F20400F9C084C00A62EB6 /* PBXTextBookmark */ = 2B8F20400F9C084C00A62EB6 /* PBXTextBookmark */;
+			2B8F20410F9C084C00A62EB6 /* PBXTextBookmark */ = 2B8F20410F9C084C00A62EB6 /* PBXTextBookmark */;
+			2B8F20440F9C090E00A62EB6 /* PBXTextBookmark */ = 2B8F20440F9C090E00A62EB6 /* PBXTextBookmark */;
+			2B8F20450F9C090E00A62EB6 /* PBXTextBookmark */ = 2B8F20450F9C090E00A62EB6 /* PBXTextBookmark */;
 			2B9A8FDC0F7D600E00A9E7BB = 2B9A8FDC0F7D600E00A9E7BB /* PBXTextBookmark */;
 			2B9A8FDD0F7D600E00A9E7BB = 2B9A8FDD0F7D600E00A9E7BB /* PBXBookmark */;
 			2BBAB0B80F9AE7CC00E3FC14 = 2BBAB0B80F9AE7CC00E3FC14 /* PBXTextBookmark */;
@@ -427,7 +443,7 @@
 		ignoreCount = 0;
 		lineNumber = 72;
 		location = ianimate;
-		modificationTime = 261882857.713724;
+		modificationTime = 261884176.90609;
 		state = 2;
 	};
 	2B1164E80F9B4244007C9AEB /* PBXTextBookmark */ = {
@@ -505,7 +521,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 245";
 		rLen = 0;
-		rLoc = 8344;
+		rLoc = 8369;
 		rType = 0;
 		vrLen = 998;
 		vrLoc = 5518;
@@ -525,7 +541,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 244";
 		rLen = 0;
-		rLoc = 8268;
+		rLoc = 8293;
 		rType = 0;
 		vrLen = 694;
 		vrLoc = 1331;
@@ -615,7 +631,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 354";
 		rLen = 0;
-		rLoc = 11243;
+		rLoc = 11268;
 		rType = 0;
 		vrLen = 1376;
 		vrLoc = 6896;
@@ -654,7 +670,7 @@
 		ignoreCount = 0;
 		lineNumber = 199;
 		location = ianimate;
-		modificationTime = 261882858.756948;
+		modificationTime = 261884177.958003;
 		state = 1;
 	};
 	2B1166600F9BCFA8007C9AEB /* PBXTextBookmark */ = {
@@ -662,7 +678,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 448";
 		rLen = 27;
-		rLoc = 13702;
+		rLoc = 13727;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 11204;
@@ -679,7 +695,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 448";
 		rLen = 27;
-		rLoc = 13702;
+		rLoc = 13727;
 		rType = 0;
 		vrLen = 906;
 		vrLoc = 11204;
@@ -703,7 +719,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 20";
 		rLen = 0;
-		rLoc = 471;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 229;
@@ -972,7 +988,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 144";
 		rLen = 0;
-		rLoc = 3821;
+		rLoc = 3846;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 2549;
@@ -1002,7 +1018,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 144";
 		rLen = 0;
-		rLoc = 3821;
+		rLoc = 3846;
 		rType = 0;
 		vrLen = 1188;
 		vrLoc = 2549;
@@ -1022,7 +1038,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 143";
 		rLen = 0;
-		rLoc = 3820;
+		rLoc = 3845;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 6912;
@@ -1042,7 +1058,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 20";
 		rLen = 0;
-		rLoc = 471;
+		rLoc = 496;
 		rType = 0;
 		vrLen = 1263;
 		vrLoc = 229;
@@ -1062,7 +1078,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 143";
 		rLen = 0;
-		rLoc = 3820;
+		rLoc = 3845;
 		rType = 0;
 		vrLen = 1422;
 		vrLoc = 2444;
@@ -1082,7 +1098,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 143";
 		rLen = 0;
-		rLoc = 3820;
+		rLoc = 3845;
 		rType = 0;
 		vrLen = 1849;
 		vrLoc = 6912;
@@ -1112,7 +1128,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 351";
 		rLen = 7;
-		rLoc = 11196;
+		rLoc = 11221;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 9126;
@@ -1142,7 +1158,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 351";
 		rLen = 7;
-		rLoc = 11196;
+		rLoc = 11221;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 9126;
@@ -1192,7 +1208,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 358";
 		rLen = 0;
-		rLoc = 11404;
+		rLoc = 11429;
 		rType = 0;
 		vrLen = 866;
 		vrLoc = 9006;
@@ -1206,7 +1222,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 144";
 		rLen = 0;
-		rLoc = 3821;
+		rLoc = 3846;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 2490;
@@ -1320,7 +1336,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 144";
 		rLen = 0;
-		rLoc = 3821;
+		rLoc = 3846;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 2490;
@@ -1430,7 +1446,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 358";
 		rLen = 0;
-		rLoc = 11404;
+		rLoc = 11429;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 9170;
@@ -1450,7 +1466,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 358";
 		rLen = 0;
-		rLoc = 11404;
+		rLoc = 11429;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 9170;
@@ -1470,7 +1486,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 358";
 		rLen = 0;
-		rLoc = 11404;
+		rLoc = 11429;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 9170;
@@ -1490,7 +1506,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 358";
 		rLen = 0;
-		rLoc = 11404;
+		rLoc = 11429;
 		rType = 0;
 		vrLen = 859;
 		vrLoc = 9170;
@@ -1534,7 +1550,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 115";
 		rLen = 0;
-		rLoc = 2602;
+		rLoc = 2627;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 1746;
@@ -1544,7 +1560,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 115";
 		rLen = 0;
-		rLoc = 2602;
+		rLoc = 2627;
 		rType = 0;
 		vrLen = 856;
 		vrLoc = 1746;
@@ -1574,7 +1590,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 112";
 		rLen = 0;
-		rLoc = 2522;
+		rLoc = 2547;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 1830;
@@ -1604,7 +1620,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 112";
 		rLen = 0;
-		rLoc = 2522;
+		rLoc = 2547;
 		rType = 0;
 		vrLen = 773;
 		vrLoc = 1830;
@@ -1674,7 +1690,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 17";
 		rLen = 0;
-		rLoc = 405;
+		rLoc = 430;
 		rType = 0;
 		vrLen = 1254;
 		vrLoc = 3;
@@ -1694,7 +1710,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 118";
 		rLen = 0;
-		rLoc = 2607;
+		rLoc = 2632;
 		rType = 0;
 		vrLen = 890;
 		vrLoc = 1916;
@@ -1718,7 +1734,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 473";
 		rLen = 0;
-		rLoc = 14281;
+		rLoc = 14942;
 		rType = 0;
 		vrLen = 1445;
 		vrLoc = 11800;
@@ -1738,7 +1754,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 11800;
@@ -1758,7 +1774,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 11800;
@@ -1788,7 +1804,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 11800;
@@ -1798,7 +1814,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1355;
 		vrLoc = 11800;
@@ -1818,7 +1834,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 118";
 		rLen = 0;
-		rLoc = 2607;
+		rLoc = 2632;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 1851;
@@ -1838,7 +1854,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 92";
 		rLen = 0;
-		rLoc = 2047;
+		rLoc = 2072;
 		rType = 0;
 		vrLen = 828;
 		vrLoc = 1851;
@@ -1858,7 +1874,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1403;
 		vrLoc = 11562;
@@ -1878,7 +1894,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 785;
 		vrLoc = 2026;
@@ -1908,7 +1924,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 11879;
@@ -1918,7 +1934,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13888;
+		rLoc = 13913;
 		rType = 0;
 		vrLen = 1424;
 		vrLoc = 11879;
@@ -1938,7 +1954,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13886;
+		rLoc = 13911;
 		rType = 0;
 		vrLen = 984;
 		vrLoc = 2048;
@@ -1958,7 +1974,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13886;
+		rLoc = 13911;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 11901;
@@ -1975,7 +1991,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13886;
+		rLoc = 13911;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 11901;
@@ -2014,7 +2030,7 @@
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		rLen = 0;
-		rLoc = 511;
+		rLoc = 512;
 		rType = 1;
 	};
 	2B8F1F6A0F9BF42D00A62EB6 /* PBXTextBookmark */ = {
@@ -2032,7 +2048,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 472";
 		rLen = 0;
-		rLoc = 13871;
+		rLoc = 13896;
 		rType = 0;
 		vrLen = 1447;
 		vrLoc = 11901;
@@ -2052,7 +2068,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 118";
 		rLen = 0;
-		rLoc = 2607;
+		rLoc = 2632;
 		rType = 0;
 		vrLen = 1014;
 		vrLoc = 2048;
@@ -2110,7 +2126,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 226";
 		rLen = 29;
-		rLoc = 5628;
+		rLoc = 5653;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 5455;
@@ -2120,7 +2136,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 225";
 		rLen = 9;
-		rLoc = 5627;
+		rLoc = 5652;
 		rType = 0;
 		vrLen = 1594;
 		vrLoc = 4946;
@@ -2140,7 +2156,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 226";
 		rLen = 29;
-		rLoc = 5628;
+		rLoc = 5653;
 		rType = 0;
 		vrLen = 1390;
 		vrLoc = 5455;
@@ -2160,7 +2176,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 228";
 		rLen = 0;
-		rLoc = 7046;
+		rLoc = 7071;
 		rType = 0;
 		vrLen = 1207;
 		vrLoc = 5149;
@@ -2190,7 +2206,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 219";
 		rLen = 0;
-		rLoc = 5487;
+		rLoc = 5512;
 		rType = 0;
 		vrLen = 1525;
 		vrLoc = 3743;
@@ -2200,7 +2216,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 219";
 		rLen = 0;
-		rLoc = 5487;
+		rLoc = 5512;
 		rType = 0;
 		vrLen = 1525;
 		vrLoc = 3743;
@@ -2220,7 +2236,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 238";
 		rLen = 0;
-		rLoc = 5769;
+		rLoc = 5794;
 		rType = 0;
 		vrLen = 1000;
 		vrLoc = 5594;
@@ -2240,7 +2256,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 238";
 		rLen = 0;
-		rLoc = 5769;
+		rLoc = 5794;
 		rType = 0;
 		vrLen = 1081;
 		vrLoc = 5594;
@@ -2260,7 +2276,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 238";
 		rLen = 0;
-		rLoc = 5769;
+		rLoc = 5794;
 		rType = 0;
 		vrLen = 1105;
 		vrLoc = 5458;
@@ -2280,7 +2296,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 239";
 		rLen = 0;
-		rLoc = 5769;
+		rLoc = 5794;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 5458;
@@ -2300,7 +2316,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 233";
 		rLen = 552;
-		rLoc = 5769;
+		rLoc = 5794;
 		rType = 0;
 		vrLen = 730;
 		vrLoc = 5820;
@@ -2320,7 +2336,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 233";
 		rLen = 0;
-		rLoc = 5797;
+		rLoc = 5822;
 		rType = 0;
 		vrLen = 1039;
 		vrLoc = 5460;
@@ -2340,7 +2356,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 233";
 		rLen = 0;
-		rLoc = 5797;
+		rLoc = 5822;
 		rType = 0;
 		vrLen = 1096;
 		vrLoc = 5460;
@@ -2360,7 +2376,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 236";
 		rLen = 0;
-		rLoc = 6272;
+		rLoc = 6297;
 		rType = 0;
 		vrLen = 1124;
 		vrLoc = 5460;
@@ -2380,7 +2396,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 235";
 		rLen = 0;
-		rLoc = 5817;
+		rLoc = 5842;
 		rType = 0;
 		vrLen = 1085;
 		vrLoc = 5460;
@@ -2400,7 +2416,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 235";
 		rLen = 0;
-		rLoc = 5877;
+		rLoc = 5902;
 		rType = 0;
 		vrLen = 1142;
 		vrLoc = 5460;
@@ -2420,7 +2436,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 235";
 		rLen = 0;
-		rLoc = 5877;
+		rLoc = 5902;
 		rType = 0;
 		vrLen = 1168;
 		vrLoc = 5460;
@@ -2440,7 +2456,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 238";
 		rLen = 0;
-		rLoc = 6061;
+		rLoc = 6086;
 		rType = 0;
 		vrLen = 1199;
 		vrLoc = 5460;
@@ -2460,7 +2476,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 239";
 		rLen = 0;
-		rLoc = 6181;
+		rLoc = 6206;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 5460;
@@ -2480,7 +2496,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 240";
 		rLen = 0;
-		rLoc = 6231;
+		rLoc = 6256;
 		rType = 0;
 		vrLen = 1225;
 		vrLoc = 5460;
@@ -2500,7 +2516,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 240";
 		rLen = 0;
-		rLoc = 6231;
+		rLoc = 6256;
 		rType = 0;
 		vrLen = 1281;
 		vrLoc = 5460;
@@ -2520,7 +2536,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 241";
 		rLen = 0;
-		rLoc = 6231;
+		rLoc = 6256;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5460;
@@ -2540,7 +2556,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 241";
 		rLen = 0;
-		rLoc = 6230;
+		rLoc = 6255;
 		rType = 0;
 		vrLen = 1257;
 		vrLoc = 5460;
@@ -2560,7 +2576,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 241";
 		rLen = 0;
-		rLoc = 6230;
+		rLoc = 6255;
 		rType = 0;
 		vrLen = 1258;
 		vrLoc = 5460;
@@ -2580,7 +2596,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 241";
 		rLen = 0;
-		rLoc = 6230;
+		rLoc = 6255;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 5460;
@@ -2600,7 +2616,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 241";
 		rLen = 0;
-		rLoc = 6230;
+		rLoc = 6255;
 		rType = 0;
 		vrLen = 1258;
 		vrLoc = 5460;
@@ -2620,7 +2636,7 @@
 		comments = "error: expected ')' before 'myContext'";
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		rLen = 1;
-		rLoc = 228;
+		rLoc = 229;
 		rType = 1;
 	};
 	2B8F1FD00F9C004200A62EB6 /* PBXTextBookmark */ = {
@@ -2638,7 +2654,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 227";
 		rLen = 0;
-		rLoc = 5656;
+		rLoc = 5681;
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 5268;
@@ -2658,7 +2674,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 237";
 		rLen = 23;
-		rLoc = 5956;
+		rLoc = 5981;
 		rType = 0;
 		vrLen = 1258;
 		vrLoc = 5460;
@@ -2678,7 +2694,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 237";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 6040;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 5460;
@@ -2698,7 +2714,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 237";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 6040;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 5460;
@@ -2718,7 +2734,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 237";
 		rLen = 0;
-		rLoc = 6015;
+		rLoc = 6040;
 		rType = 0;
 		vrLen = 1289;
 		vrLoc = 5460;
@@ -2738,7 +2754,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 251";
 		rLen = 0;
-		rLoc = 6654;
+		rLoc = 6679;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 5460;
@@ -2758,7 +2774,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 251";
 		rLen = 0;
-		rLoc = 6653;
+		rLoc = 6678;
 		rType = 0;
 		vrLen = 1455;
 		vrLoc = 5460;
@@ -2778,7 +2794,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 318";
 		rLen = 0;
-		rLoc = 8651;
+		rLoc = 8676;
 		rType = 0;
 		vrLen = 1193;
 		vrLoc = 7848;
@@ -2788,7 +2804,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 227";
 		rLen = 0;
-		rLoc = 5656;
+		rLoc = 5681;
 		rType = 0;
 		vrLen = 896;
 		vrLoc = 5268;
@@ -2808,7 +2824,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 513";
 		rLen = 0;
-		rLoc = 14068;
+		rLoc = 14093;
 		rType = 0;
 		vrLen = 1592;
 		vrLoc = 13359;
@@ -2828,7 +2844,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 511";
 		rLen = 7;
-		rLoc = 13958;
+		rLoc = 13983;
 		rType = 0;
 		vrLen = 1392;
 		vrLoc = 13173;
@@ -2848,7 +2864,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 514";
 		rLen = 0;
-		rLoc = 14237;
+		rLoc = 14898;
 		rType = 0;
 		vrLen = 1328;
 		vrLoc = 13173;
@@ -2868,7 +2884,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 520";
 		rLen = 0;
-		rLoc = 14237;
+		rLoc = 14898;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 13173;
@@ -2888,7 +2904,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 520";
 		rLen = 0;
-		rLoc = 14237;
+		rLoc = 14898;
 		rType = 0;
 		vrLen = 1006;
 		vrLoc = 13173;
@@ -2908,7 +2924,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 514";
 		rLen = 3;
-		rLoc = 14137;
+		rLoc = 14162;
 		rType = 0;
 		vrLen = 1310;
 		vrLoc = 13291;
@@ -2928,7 +2944,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 118";
 		rLen = 0;
-		rLoc = 2607;
+		rLoc = 2632;
 		rType = 0;
 		vrLen = 1139;
 		vrLoc = 2184;
@@ -2948,7 +2964,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 221";
 		rLen = 0;
-		rLoc = 5593;
+		rLoc = 5618;
 		rType = 0;
 		vrLen = 1335;
 		vrLoc = 4829;
@@ -2968,7 +2984,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 254";
 		rLen = 0;
-		rLoc = 6720;
+		rLoc = 6745;
 		rType = 0;
 		vrLen = 1569;
 		vrLoc = 5885;
@@ -2988,7 +3004,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 254";
 		rLen = 11;
-		rLoc = 6677;
+		rLoc = 6702;
 		rType = 0;
 		vrLen = 1658;
 		vrLoc = 5885;
@@ -3008,7 +3024,7 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 255";
 		rLen = 0;
-		rLoc = 6825;
+		rLoc = 6850;
 		rType = 0;
 		vrLen = 1687;
 		vrLoc = 5885;
@@ -3028,17 +3044,175 @@
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 255";
 		rLen = 0;
-		rLoc = 6780;
+		rLoc = 6805;
 		rType = 0;
 		vrLen = 1499;
 		vrLoc = 6324;
+	};
+	2B8F201C0F9C046D00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 515;
+	};
+	2B8F201D0F9C046D00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 255";
+		rLen = 0;
+		rLoc = 6805;
+		rType = 0;
+		vrLen = 1499;
+		vrLoc = 6324;
+	};
+	2B8F201F0F9C047400A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 515;
+	};
+	2B8F20200F9C047400A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 255";
+		rLen = 0;
+		rLoc = 6805;
+		rType = 0;
+		vrLen = 1499;
+		vrLoc = 6324;
+	};
+	2B8F20240F9C075D00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 515;
+	};
+	2B8F20250F9C075D00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 527";
+		rLen = 0;
+		rLoc = 14817;
+		rType = 0;
+		vrLen = 1670;
+		vrLoc = 13892;
+	};
+	2B8F20270F9C077F00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 515;
+	};
+	2B8F20280F9C077F00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 18";
+		rLen = 0;
+		rLoc = 431;
+		rType = 0;
+		vrLen = 1252;
+		vrLoc = 0;
+	};
+	2B8F20370F9C083500A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 515;
+	};
+	2B8F20380F9C083500A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 525";
+		rLen = 0;
+		rLoc = 14817;
+		rType = 0;
+		vrLen = 1388;
+		vrLoc = 13702;
+	};
+	2B8F203A0F9C084000A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "error: 'CATextLayer' undeclared (first use in this function)";
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		rLen = 0;
+		rLoc = 525;
+		rType = 1;
+	};
+	2B8F203B0F9C084000A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 525";
+		rLen = 0;
+		rLoc = 14817;
+		rType = 0;
+		vrLen = 812;
+		vrLoc = 13806;
+	};
+	2B8F20400F9C084C00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 515;
+	};
+	2B8F20410F9C084C00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 525";
+		rLen = 0;
+		rLoc = 14817;
+		rType = 0;
+		vrLen = 1439;
+		vrLoc = 13702;
+	};
+	2B8F20440F9C090E00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF60DDB3853001CB0EB /* ianimateViewController.h */;
+		name = "ianimateViewController.h: 59";
+		rLen = 0;
+		rLoc = 1221;
+		rType = 0;
+		vrLen = 705;
+		vrLoc = 515;
+	};
+	2B8F20450F9C090E00A62EB6 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
+		name = "ianimateViewController.m: 18";
+		rLen = 0;
+		rLoc = 430;
+		rType = 0;
+		vrLen = 1219;
+		vrLoc = 158;
 	};
 	2B9A8FDC0F7D600E00A9E7BB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */;
 		name = "ianimateViewController.m: 156";
 		rLen = 0;
-		rLoc = 12296;
+		rLoc = 12321;
 		rType = 0;
 		vrLen = 1685;
 		vrLoc = 2180;
@@ -3216,7 +3390,7 @@
 		ignoreCount = 0;
 		lineNumber = 30;
 		location = ianimate;
-		modificationTime = 261882858.688397;
+		modificationTime = 261884177.865291;
 		state = 1;
 	};
 	2BBAB2AE0F9B012700E3FC14 /* PBXTextBookmark */ = {

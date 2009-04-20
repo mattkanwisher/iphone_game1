@@ -15,6 +15,7 @@
 #import "AsteroidFrontLayer.h"
 #import	"QuartzUtils.h"
 #import "GGBUtils.h"
+#import "GGBTextLayer.h"
 
 @implementation ianimateViewController
 
@@ -521,6 +522,25 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 				}
 				else {
 					NSLog(@"Level Complete!");
+
+//					GGBLayer *front = [super createFront];
+					NSString *name = [NSString stringWithFormat: @"Level complete!"];
+					
+					
+#if TARGET_OS_IPHONE
+					UIFont *cornerFont = [UIFont boldSystemFontOfSize: 24];
+#else
+					NSFont *cornerFont = [NSFont boldSystemFontOfSize: 24];
+#endif
+					GGBTextLayer *label;
+					label = [GGBTextLayer textLayerInSuperlayer: backgroundLayer
+													   withText: name
+														   font: cornerFont
+													  alignment: kCALayerMaxXMargin | kCALayerBottomMargin];
+					//label.foregroundColor = suitColor;
+					
+					// Add the text layer
+//					[backgroundLayer addSublayer:textLayer];
 				}
 			}
 			//[layer setNeedsDisplay];
