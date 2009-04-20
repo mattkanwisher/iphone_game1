@@ -21,6 +21,12 @@
 		2B6461C50F9ADBFB00B8B23D /* LittleDudeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6461C40F9ADBFB00B8B23D /* LittleDudeObject.m */; };
 		2B64626E0F9AE1AF00B8B23D /* GameObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64626D0F9AE1AF00B8B23D /* GameObjectLayer.m */; };
 		2B6462A10F9AE23700B8B23D /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6462A00F9AE23700B8B23D /* ImageLayer.m */; };
+		2B8F1DE50F9BD39C00A62EB6 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1DE40F9BD39C00A62EB6 /* girl.png */; };
+		2B8F1E200F9BD5E000A62EB6 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1E1F0F9BD5E000A62EB6 /* circle.png */; };
+		2B8F1EA30F9BEEA900A62EB6 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */; };
+		2B8F1ECA0F9BEFDD00A62EB6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8F1EC90F9BEFDD00A62EB6 /* AVFoundation.framework */; };
+		2B8F1EF30F9BF10300A62EB6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B8F1EF20F9BF10300A62EB6 /* AudioToolbox.framework */; };
+		2B8F1F230F9BF29100A62EB6 /* Pop.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1F220F9BF29100A62EB6 /* Pop.aiff */; };
 		2B9A8FD80F7D5FE900A9E7BB /* little-dude.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */; };
 		2BA78E160F746936001C5ADF /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BA78E150F746936001C5ADF /* back.png */; };
 		2BBAB0AE0F9AE79D00E3FC14 /* AsteroidFrontLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBAB0AD0F9AE79D00E3FC14 /* AsteroidFrontLayer.m */; };
@@ -57,6 +63,12 @@
 		2B64626D0F9AE1AF00B8B23D /* GameObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectLayer.m; sourceTree = "<group>"; };
 		2B64629F0F9AE23700B8B23D /* ImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLayer.h; sourceTree = "<group>"; };
 		2B6462A00F9AE23700B8B23D /* ImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLayer.m; sourceTree = "<group>"; };
+		2B8F1DE40F9BD39C00A62EB6 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		2B8F1E1F0F9BD5E000A62EB6 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		2B8F1EC90F9BEFDD00A62EB6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2B8F1EF20F9BF10300A62EB6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2B8F1F220F9BF29100A62EB6 /* Pop.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Pop.aiff; sourceTree = "<group>"; };
 		2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "little-dude.png"; sourceTree = "<group>"; };
 		2BA78E150F746936001C5ADF /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		2BBAB0AC0F9AE79D00E3FC14 /* AsteroidFrontLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsteroidFrontLayer.h; sourceTree = "<group>"; };
@@ -82,6 +94,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
 				FBBFBB830EA94FED00019F43 /* QuartzCore.framework in Frameworks */,
+				2B8F1ECA0F9BEFDD00A62EB6 /* AVFoundation.framework in Frameworks */,
+				2B8F1EF30F9BF10300A62EB6 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,11 +135,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				2BBAB3400F9B06BD00E3FC14 /* back2.png */,
-				2BBAB0EC0F9AEA3100E3FC14 /* background.pdf */,
-				2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */,
-				2BA78E150F746936001C5ADF /* back.png */,
-				FBBFBB840EA9501200019F43 /* clipartPlane.png */,
 				FBBFBB820EA94FEC00019F43 /* QuartzCore.framework */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -148,6 +157,15 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B8F1F220F9BF29100A62EB6 /* Pop.aiff */,
+				2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */,
+				2B8F1E1F0F9BD5E000A62EB6 /* circle.png */,
+				2B8F1DE40F9BD39C00A62EB6 /* girl.png */,
+				2BBAB3400F9B06BD00E3FC14 /* back2.png */,
+				2BBAB0EC0F9AEA3100E3FC14 /* background.pdf */,
+				2B9A8FD70F7D5FE900A9E7BB /* little-dude.png */,
+				2BA78E150F746936001C5ADF /* back.png */,
+				FBBFBB840EA9501200019F43 /* clipartPlane.png */,
 				2899E5210DE3E06400AC0155 /* ianimateViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Info.plist */,
@@ -158,6 +176,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2B8F1EF20F9BF10300A62EB6 /* AudioToolbox.framework */,
+				2B8F1EC90F9BEFDD00A62EB6 /* AVFoundation.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -238,6 +258,10 @@
 				2B9A8FD80F7D5FE900A9E7BB /* little-dude.png in Resources */,
 				2BBAB0ED0F9AEA3100E3FC14 /* background.pdf in Resources */,
 				2BBAB3410F9B06BD00E3FC14 /* back2.png in Resources */,
+				2B8F1DE50F9BD39C00A62EB6 /* girl.png in Resources */,
+				2B8F1E200F9BD5E000A62EB6 /* circle.png in Resources */,
+				2B8F1EA30F9BEEA900A62EB6 /* sample.mp3 in Resources */,
+				2B8F1F230F9BF29100A62EB6 /* Pop.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

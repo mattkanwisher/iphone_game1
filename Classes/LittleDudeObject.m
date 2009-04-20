@@ -12,11 +12,11 @@
 #import "LittleDudeObject.h"
 #import "GameData.h"
 
-const double ASTEROID_LARGE_SIZE = 0.1;
+const double ASTEROID_LARGE_SIZE = 0.2;//0.1;
 const double ASTEROID_MAX_SPEED = 0.166;
-const double ASTEROID_MEDIUM_SIZE = 0.065;
+const double ASTEROID_MEDIUM_SIZE = 2;//0.065;
 const double ASTEROID_MIN_SPEED = 0.033;
-const double ASTEROID_SMALL_SIZE = 0.04;
+const double ASTEROID_SMALL_SIZE = 1;//0.04;
 const double ASTEROID_START_RADIUS = 0.40;
 const NSInteger ASTEROID_BASE_NUM = 3;
 
@@ -137,7 +137,7 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 			forKey:GAME_DATA_ASTEROIDS_CREATED_KEY];
 
 		LittleDudeObject *asteroid = [[LittleDudeObject alloc]
-			initWithImageName:@"little-dude.png"//"little-dude"
+			initWithImageName:@"circle.png"//"little-dude"
 			x:x
 			y:y
 			width:size

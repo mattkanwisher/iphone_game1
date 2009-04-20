@@ -14,6 +14,7 @@
 #import "GameObjectLayer.h"
 #import "AsteroidFrontLayer.h"
 #import	"QuartzUtils.h"
+#import "GGBUtils.h"
 
 @implementation ianimateViewController
 
@@ -99,6 +100,23 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	 userInfo:nil
 	 repeats:YES];
 
+	NSError *err;
+	
+	player = [ [ AVAudioPlayer alloc ]
+			  initWithContentsOfURL: [ NSURL fileURLWithPath: [ [ NSBundle mainBundle ] pathForResource: @"sample" ofType:@"mp3" ] ]
+			  error: &err
+			  ];		
+	
+	if (err)
+		NSLog(@"Failed to initialize AVAudioPlayer: %@\n", err);
+	
+//	[ self setNavProperties ];
+	player.delegate = self;
+	[ player prepareToPlay ];
+	
+	
+	[ player play ];
+
 	
 	[[GameData sharedGameData] newGame];
 
@@ -110,6 +128,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	 forKey:kCATransactionDisableActions];
 	
 	
+
 	
 	CALayer *rootLayer = self.view.layer;
 	//backgroundLayer = backgroundView.layer;
@@ -140,7 +159,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	backgroundLayer = rootLayer;
 	
 	//[LittleDudeObject spawnNewAsteroidsReplacing:nil];
-
+	[self drawBackground];
 	
 	[CATransaction commit];
 
@@ -195,14 +214,53 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	
 */
 	
+	[self DrawTransparentCover];
+
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
+
 	
     [super viewDidLoad];
 	
 }
 
 
+
+- (void)DrawTransparentCover
+{
+	[CATransaction begin];
+	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
+	
+	
+	CALayer* backgroundLayer2 =[CALayer layer];
+	
+	backgroundLayer2.backgroundColor = GetCGPatternNamed(@"back2.png");
+	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
+	backgroundLayer2.bounds        = CGRectMake( 0, 0, 400, 400 );//backgroundLayer.bounds;
+	backgroundLayer2.position      = CGPointMake( 0, 0 );
+	backgroundLayer2.anchorPoint         = CGPointMake( 0.5, 0.5 );
+	backgroundLayer2.name = @"Mask";
+	backgroundLayer2.opacity = 0.98;
+	backgroundLayer2.masksToBounds   = YES;
+	[backgroundLayer addSublayer:backgroundLayer2];
+	
+
+	CALayer* backgroundLayer3 =[CALayer layer];
+	
+	backgroundLayer3.backgroundColor = GetCGPatternNamed(@"back2.png");
+	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
+	backgroundLayer3.bounds        = CGRectMake( 0, 0, 200, 200 );//backgroundLayer.bounds;
+	backgroundLayer3.position      = CGPointMake( 200, 200 );
+	backgroundLayer3.anchorPoint         = CGPointMake( 0.5, 0.5 );
+	backgroundLayer3.borderColor = GetCGPatternNamed(@"back.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
+	backgroundLayer3.borderWidth=4.0;
+	backgroundLayer3.name = @"Mask";
+	backgroundLayer3.opacity = 0.98;
+	backgroundLayer3.masksToBounds   = YES;
+	[backgroundLayer addSublayer:backgroundLayer3];
+	[CATransaction commit];
+	
+}
 
 //
 // createImageLayerForGameObject:
@@ -241,26 +299,27 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 		 setValue:[NSNumber numberWithBool:YES]
 		 forKey:kCATransactionDisableActions];
 		[backgroundLayer addSublayer:asteroidFrontLayer];
-		
+/*		
 		for (int i = 0; i < backgroundLayer.sublayers.count; i++) {
 			CALayer* layer = [backgroundLayer.sublayers objectAtIndex:i];
 			NSLog(@"Layer-%@-%@", layer, layer.name);
 			//[layer setNeedsDisplay];
 		}
-		
+*/	/*	
 		[asteroidFrontLayer setNeedsDisplay];
 		[backgroundLayer setNeedsDisplay];
 		[self.view setNeedsDisplay];
 		[self.view.layer setNeedsDisplay];
+ */
 		[CATransaction commit];
 
-		[asteroidFrontLayer setNeedsDisplay];
+	//	[asteroidFrontLayer setNeedsDisplay];
 
 	}
 
-	[backgroundLayer setNeedsDisplay];
-	[self.view setNeedsDisplay];
-	[self.view.layer setNeedsDisplay];
+//	[backgroundLayer setNeedsDisplay];
+//	[self.view setNeedsDisplay];
+//	[self.view.layer setNeedsDisplay];
 	
 }
 
@@ -349,14 +408,13 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 }	
 
 - (void)drawBackground
-
 {
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
 	
 	backgroundLayer = 	[[[ImageLayer alloc]
-						  initWithImageNamed:@"back2.png"
+						  initWithImageNamed:@"girl.png"
 						  frame:CGRectZero]
 						 autorelease];
 	
@@ -450,7 +508,24 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	if (collision)
 	{
 		NSLog(@"Collision %@", collision);
-		[[GameData sharedGameData]  removeGameObjectForKey:collision];		
+		[[GameData sharedGameData]  removeGameObjectForKey:collision];
+		PlaySound(@"Pop");
+
+		for (int i = 0; i < backgroundLayer.sublayers.count; i++) {
+			CALayer* layer = [backgroundLayer.sublayers objectAtIndex:i];
+			NSLog(@"Layer-%@-%@", layer, layer.name);
+			if( [layer.name isEqualToString:@"Mask"] ) {
+				if( layer.hidden != YES ) {
+					layer.hidden = YES;
+					return;
+				}
+				else {
+					NSLog(@"Level Complete!");
+				}
+			}
+			//[layer setNeedsDisplay];
+		}
+		
 	}		
 	
     /*

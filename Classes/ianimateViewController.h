@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import <AVFoundation/AVFoundation.h>
 
 
 // Constant for the number of acceleration samples kept in history.
 #define kHistorySize 150
 
-@interface ianimateViewController : UIViewController <UIAccelerometerDelegate> {
+@interface ianimateViewController : UIViewController <UIAccelerometerDelegate,AVAudioPlayerDelegate> {
 
 	IBOutlet UIImageView *plane;
 	IBOutlet UIImageView *plane2;
@@ -46,11 +47,14 @@
 	
 	
 	NSTimeInterval frameDuration;
+	AVAudioPlayer *player;
 }
 
 
 
 -(IBAction)movePlane:(id)sender;
+- (void)drawBackground;
+- (void)DrawTransparentCover;
 
 @end
 
