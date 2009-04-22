@@ -68,32 +68,17 @@
 //
 - (void)drawInContext:(CGContextRef)ctx
 {
-	
+	if(![imageName isEqualToString:@""]) {
 	[super drawInContext: ctx];    
     CGContextSaveGState(ctx);
 	
-	/*
-	CGGraphicsContext *oldContext = [NSGraphicsContext currentContext];
-	NSGraphicsContext *context =
-		[NSGraphicsContext graphicsContextWithGraphicsPort:ctx flipped:NO];
-	[NSGraphicsContext setCurrentContext:context];
-	*/
-/*
- UIImage *image = [UIImage imageNamed:imageName];
-	[image
-	 drawInRect:[self bounds] ];
- */
+	
 	CGImageRef _image = GetCGImageNamed(imageName);
 	CGContextDrawImage(ctx, [self bounds], _image);
 
-	/*
-//		fromRect:[image alignmentRect]
-		//operation:CGCompositeSourceOver
-		fraction:1.0];
-	 */
-	
+
 	CGContextRestoreGState(ctx);
-	//[NSGraphicsContext setCurrentContext:oldContext];
+	}
 }
 
 //

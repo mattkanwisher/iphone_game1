@@ -30,7 +30,7 @@
 		angle = 2.0 * M_PI * (double)random() / (double)INT_MAX;
 		angularVelocity = -MAX_ANGULAR_VELOCITY + 2.0 * MAX_ANGULAR_VELOCITY * (double)random() / (double)INT_MAX;
 		
-		self.imageName = @"little-dude.png";
+		self.imageName = @"";//bubble.png";
 	}
 	return self;
 }

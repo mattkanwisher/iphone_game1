@@ -21,6 +21,7 @@
 		2B6461C50F9ADBFB00B8B23D /* LittleDudeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6461C40F9ADBFB00B8B23D /* LittleDudeObject.m */; };
 		2B64626E0F9AE1AF00B8B23D /* GameObjectLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B64626D0F9AE1AF00B8B23D /* GameObjectLayer.m */; };
 		2B6462A10F9AE23700B8B23D /* ImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6462A00F9AE23700B8B23D /* ImageLayer.m */; };
+		2B8597550F9EA5B6001EEF33 /* bubble.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8597540F9EA5B6001EEF33 /* bubble.png */; };
 		2B8F1DE50F9BD39C00A62EB6 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1DE40F9BD39C00A62EB6 /* girl.png */; };
 		2B8F1E200F9BD5E000A62EB6 /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1E1F0F9BD5E000A62EB6 /* circle.png */; };
 		2B8F1EA30F9BEEA900A62EB6 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */; };
@@ -65,6 +66,7 @@
 		2B64626D0F9AE1AF00B8B23D /* GameObjectLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameObjectLayer.m; sourceTree = "<group>"; };
 		2B64629F0F9AE23700B8B23D /* ImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLayer.h; sourceTree = "<group>"; };
 		2B6462A00F9AE23700B8B23D /* ImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageLayer.m; sourceTree = "<group>"; };
+		2B8597540F9EA5B6001EEF33 /* bubble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble.png; sourceTree = "<group>"; };
 		2B8F1DE40F9BD39C00A62EB6 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
 		2B8F1E1F0F9BD5E000A62EB6 /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B8597540F9EA5B6001EEF33 /* bubble.png */,
 				2B8F1F220F9BF29100A62EB6 /* Pop.aiff */,
 				2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */,
 				2B8F1E1F0F9BD5E000A62EB6 /* circle.png */,
@@ -272,6 +275,7 @@
 				2B8F1E200F9BD5E000A62EB6 /* circle.png in Resources */,
 				2B8F1EA30F9BEEA900A62EB6 /* sample.mp3 in Resources */,
 				2B8F1F230F9BF29100A62EB6 /* Pop.aiff in Resources */,
+				2B8597550F9EA5B6001EEF33 /* bubble.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

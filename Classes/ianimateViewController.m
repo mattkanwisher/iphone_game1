@@ -37,23 +37,6 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 
 
-/*
-// Override initWithNibName:bundle: to load the view using a nib file then perform additional customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement loadView to create a view hierarchy programmatically.
-- (void)loadView {
-}
-*/
-
-
 - (void)viewDidLoad {
 	// Configure and start the accelerometer
     [[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / kAccelerometerFrequency)];
@@ -71,8 +54,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 	x = 0;
 	y = 0;
-	height = 400;
-	width = 320;
+	height = 320;
+	width = 480;
 	speed = 0;
 	trajectory = 0;
 	bdone = false;
@@ -132,88 +115,12 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 	
 	CALayer *rootLayer = self.view.layer;
-	//backgroundLayer = backgroundView.layer;
-/*
-    rootLayer.affineTransform = CGAffineTransformIdentity;
-    CGRect frame = rootLayer.frame;
-    frame.origin.x = frame.origin.y = 0;
-    rootLayer.bounds = frame;
-	
-//    if( [gameClass landscapeOriented] && frame.size.height > frame.size.width ) {
-        rootLayer.affineTransform = CGAffineTransformMakeRotation(M_PI/2);
-        frame = CGRectMake(0,0,frame.size.height,frame.size.width);
-        rootLayer.bounds = frame;
- //   }
-    */
-/*    backgroundLayer = 	[[[ImageLayer alloc]
-					  initWithImageNamed:@"back2.png"
-					  frame:CGRectZero]
-					 autorelease];
-	
-	//[[GGBLayer alloc] init];
-	CGRect frame = rootLayer.frame;
-    backgroundLayer.frame = frame;
-	backgroundLayer.masksToBounds = YES;
-//    [rootLayer addSublayer: backgroundLayer];
-	[rootLayer insertSublayer:backgroundLayer atIndex:0];
-	*/
+
 	backgroundLayer = rootLayer;
 	
-	//[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 	[self drawBackground];
 	
 	[CATransaction commit];
-
-//    [backgroundLayer release];
-//    _game = [[gameClass alloc] initNewGameWithTable: _gameboard];
-/*	
-	
-	CALayer *thisLayer  = backgroundView.layer;//background.layer;//self.view.layer;
-	backgroundLayer = backgroundView.layer;
-	backgroundLayer.backgroundColor = GetCGPatternNamed(@"back.png");
-	
-	CALayer *backgroundLayer2 =
-	[[[ImageLayer alloc]
-	  initWithImageNamed:@"back.png"
-	  frame:CGRectZero]
-	 autorelease];
-	backgroundLayer2.masksToBounds = YES;
-//	[thisLayer insertSublayer:backgroundLayer atIndex:0];
-	[backgroundLayer addSublayer:backgroundLayer2];
-
-	double gameWidth = [[GameData sharedGameData] gameWidth];
-	double gameHeight = [[GameData sharedGameData] gameHeight];
-	
-	CGSize contentSize = [self.view bounds].size;
-	
-	CGSize aspectSize = contentSize;
-	double scale;
-	if ((aspectSize.width / aspectSize.height) > (gameWidth / gameHeight))
-	{
-		scale = aspectSize.height / gameHeight;
-		aspectSize.width = aspectSize.height * (gameWidth / gameHeight);
-	}
-	else
-	{
-		scale = aspectSize.width / gameWidth;
-		aspectSize.height = aspectSize.width * (gameHeight / gameWidth);
-	}
-	
-	[CATransaction begin];
-	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-	backgroundLayer.transform = CATransform3DMakeScale(scale, scale, 1.0);
-	backgroundLayer.frame =
-	CGRectMake(
-			   0.5 * (contentSize.width - aspectSize.width),
-			   0.5 * (contentSize.height - aspectSize.height),
-			   aspectSize.width,
-			   aspectSize.height);
-	[CATransaction commit];
-	
-	//	[background.layer insertSublayer:backgroundLayer atIndex:0];
-//	[thisLayer updateContentViewFrame:nil];
-	
-*/
 	
 	[self DrawTransparentCover];
 
@@ -233,32 +140,37 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	
 	
-	CALayer* backgroundLayer2 =[CALayer layer];
+	CALayer* backgroundLayer2  = nil;
+	for(int i = 0; i< 6; i ++ ) {
+	backgroundLayer2 = [CALayer layer];
 	
 	backgroundLayer2.backgroundColor = GetCGPatternNamed(@"back2.png");
 	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
-	backgroundLayer2.bounds        = CGRectMake( 0, 0, 400, 400 );//backgroundLayer.bounds;
-	backgroundLayer2.position      = CGPointMake( 0, 0 );
+	backgroundLayer2.bounds        = CGRectMake( 0 + (i*50), 0+ (i*50), 200, 200 );//backgroundLayer.bounds;
+	backgroundLayer2.position      = CGPointMake( 0 + (i*50), 100 + (i*50));
 	backgroundLayer2.anchorPoint         = CGPointMake( 0.5, 0.5 );
+	backgroundLayer2.borderColor = GetCGPatternNamed(@"back2.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
 	backgroundLayer2.name = @"Mask";
 	backgroundLayer2.opacity = 0.98;
 	backgroundLayer2.masksToBounds   = YES;
 	[backgroundLayer addSublayer:backgroundLayer2];
 	
+	}
 
-	CALayer* backgroundLayer3 =[CALayer layer];
+	/*CALayer* backgroundLayer3 =[CALayer layer];
 	
 	backgroundLayer3.backgroundColor = GetCGPatternNamed(@"back2.png");
 	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
-	backgroundLayer3.bounds        = CGRectMake( 0, 0, 200, 200 );//backgroundLayer.bounds;
+	backgroundLayer3.bounds        = CGRectMake( 0, 0, 100, 100 );//backgroundLayer.bounds;
 	backgroundLayer3.position      = CGPointMake( 200, 200 );
 	backgroundLayer3.anchorPoint         = CGPointMake( 0.5, 0.5 );
-	backgroundLayer3.borderColor = GetCGPatternNamed(@"back.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
-	backgroundLayer3.borderWidth=4.0;
+	backgroundLayer3.borderColor = GetCGPatternNamed(@"back2.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
+	backgroundLayer3.borderWidth=1.0;
 	backgroundLayer3.name = @"Mask";
 	backgroundLayer3.opacity = 0.98;
 	backgroundLayer3.masksToBounds   = YES;
 	[backgroundLayer addSublayer:backgroundLayer3];
+	 */
 	[CATransaction commit];
 	
 }
@@ -300,58 +212,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 		 setValue:[NSNumber numberWithBool:YES]
 		 forKey:kCATransactionDisableActions];
 		[backgroundLayer addSublayer:asteroidFrontLayer];
-/*		
-		for (int i = 0; i < backgroundLayer.sublayers.count; i++) {
-			CALayer* layer = [backgroundLayer.sublayers objectAtIndex:i];
-			NSLog(@"Layer-%@-%@", layer, layer.name);
-			//[layer setNeedsDisplay];
-		}
-*/	/*	
-		[asteroidFrontLayer setNeedsDisplay];
-		[backgroundLayer setNeedsDisplay];
-		[self.view setNeedsDisplay];
-		[self.view.layer setNeedsDisplay];
- */
 		[CATransaction commit];
-
-	//	[asteroidFrontLayer setNeedsDisplay];
-
-	}
-
-//	[backgroundLayer setNeedsDisplay];
-//	[self.view setNeedsDisplay];
-//	[self.view.layer setNeedsDisplay];
-	
-}
-
-
--(IBAction)movePlane:(id)sender {
-	/*
-	
-	
-	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
-
-	
-	 */
-	[UIView beginAnimations:nil context:NULL];
-	
-	CGAffineTransform moveTransform = CGAffineTransformMakeTranslation(200, 200);
-	[plane2.layer setAffineTransform:moveTransform];
-	plane2.layer.opacity = 1;
-	
-	CGAffineTransform myAffine = CGAffineTransformMakeRotation(180*M_PI*2/360); //.50*M_PI); 
-	CGAffineTransformTranslate(myAffine, 100, 100); 
-	//CGContextConcatCTM(ctx, myAffine); 
-	[background.layer setAffineTransform:myAffine];
-
-	
-	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
-	
-
-	
-	[UIView commitAnimations];
-
-
+	}	
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -395,15 +257,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 - (void)updateLevel2:(NSTimer *)aTimer
 {
 	NSLog(@"updateLevel2");
-
-
-//	[self movePlane:nil];
 //	if(bdone == false) {
-		
-
 		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
-
-
 //	}	
 	
 }	
@@ -433,68 +288,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	
 - (void)updateLevel:(NSTimer *)aTimer
 {
-	/*
-
-	if (lastUpdate)
-	{
-		frameDuration = [[NSDate date] timeIntervalSinceDate:lastUpdate];
-		[lastUpdate release];
-		lastUpdate = [[NSDate alloc] init];
-	}
-	else
-	{
-		frameDuration = GAME_UPDATE_DURATION2;
-	}
-	
-
-	[UIView beginAnimations:nil context:NULL];
-	
-	angle  += speed;
-	CGAffineTransform myAffine = CGAffineTransformMakeRotation(angle*M_PI*2/360); //.50*M_PI); 
-	CGAffineTransformTranslate(myAffine, 100, 100); 
-	[background.layer setAffineTransform:myAffine];
-	
-	[UIView commitAnimations];
-	*/
-	/*
-
-	curloc += speed;
-	CGAffineTransform moveTransform = CGAffineTransformMakeTranslation(curloc, curloc);
-	[plane.layer setAffineTransform:moveTransform];		
-	 
-	 */
 }
 
-
-
-
-
-/** Locates the layer at a given point in window coords.
- If the leaf layer doesn't pass the layer-match callback, the nearest ancestor that does is returned.
- If outOffset is provided, the point's position relative to the layer is stored into it. */
-/*
-- (CALayer*) hitTestPoint: (CGPoint)where
-         forLayerMatching: (LayerMatchCallback)match
-                   offset: (CGPoint*)outOffset
-{
-    where = [_gameboard convertPoint: where fromLayer: self.layer];
-    CALayer *layer = [_gameboard hitTest: where];
-    while( layer ) {
-        if( match(layer) ) {
-            CGPoint bitPos = [self.layer convertPoint: layer.position 
-                              fromLayer: layer.superlayer];
-            if( outOffset )
-                *outOffset = CGPointMake( bitPos.x-where.x, bitPos.y-where.y);
-            return layer;
-        } else
-            layer = layer.superlayer;
-    }
-    return nil;
-}
-
- */
-#pragma mark -
-#pragma mark MOUSE CLICKS & DRAGS:
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -520,7 +315,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 					layer.hidden = YES;
 					return;
 				}
-				else {
+			}
+		}
 					NSLog(@"Level Complete!");
 
 //					GGBLayer *front = [super createFront];
@@ -537,76 +333,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 													   withText: name
 														   font: cornerFont
 													  alignment: kCALayerMaxXMargin | kCALayerBottomMargin];
-					//label.foregroundColor = suitColor;
-					
-					// Add the text layer
-//					[backgroundLayer addSublayer:textLayer];
-				}
-			}
-			//[layer setNeedsDisplay];
-		}
-		
-	}		
-	
-    /*
-    BOOL placing = NO;
-    _dragStartPos = [touch locationInView: self];
-    _dragBit = (Bit*) [self hitTestPoint: _dragStartPos
-                        forLayerMatching: layerIsBit 
-                                  offset: &_dragOffset];
-	
-    if( ! _dragBit ) {
-        // If no bit was clicked, see if it's a BitHolder the game will let the user add a Bit to:
-        id<BitHolder> holder = (id<BitHolder>) [self hitTestPoint: _dragStartPos
-                                                 forLayerMatching: layerIsBitHolder
-                                                           offset: NULL];
-        if( holder ) {
-            _dragBit = [_game bitToPlaceInHolder: holder];
-            if( _dragBit ) {
-                _dragOffset.x = _dragOffset.y = 0;
-                if( _dragBit.superlayer==nil )
-                    _dragBit.position = _dragStartPos;
-                placing = YES;
-            }
-        }
-    }
-	
-    if( ! _dragBit ) {
-        Beep();
-        return;
-    }
-    
-    // Clicked on a Bit:
-    _dragMoved = NO;
-    _dropTarget = nil;
-    _oldHolder = _dragBit.holder;
-    // Ask holder's and game's permission before dragging:
-    if( _oldHolder ) {
-        _dragBit = [_oldHolder canDragBit: _dragBit];
-        if( _dragBit && ! [_game canBit: _dragBit moveFrom: _oldHolder] ) {
-            [_oldHolder cancelDragBit: _dragBit];
-            _dragBit = nil;
-        }
-        if( ! _dragBit ) {
-            _oldHolder = nil;
-            Beep();
-            return;
-        }
-    }
-    // Start dragging:
-    _oldSuperlayer = _dragBit.superlayer;
-    _oldLayerIndex = [_oldSuperlayer.sublayers indexOfObjectIdenticalTo: _dragBit];
-    _oldPos = _dragBit.position;
-    ChangeSuperlayer(_dragBit, self.layer, self.layer.sublayers.count);
-    _dragBit.pickedUp = YES;
-    
-    if( placing ) {
-        if( _oldSuperlayer )
-            _dragBit.position = _dragStartPos;      // animate Bit to new position
-        _dragMoved = YES;
-        [self _findDropTarget: _dragStartPos];
-    }
-	 */
+				
+	}			
 }
 
 

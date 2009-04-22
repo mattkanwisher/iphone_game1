@@ -21,10 +21,7 @@
     
 	[application setStatusBarHidden:YES animated:NO];
 	
-    // Override point for customization after app launch    
-//    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
-    //window.layer.backgroundColor = GetCGPatternNamed(@"back2.png");
 	[window addSubview:viewController.view];
 	 
 	
