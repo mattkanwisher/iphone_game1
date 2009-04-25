@@ -70,7 +70,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 //
 - (double)gameWidth
 {
-	static double gameWidth = 0;
+	static double gameWidth = 320;
 	
 	if (gameWidth == 0)
 	{
@@ -92,7 +92,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 //
 - (double)gameHeight
 {
-	static double gameHeight = 0;
+	static double gameHeight = 480;
 	
 	if (gameHeight == 0)
 	{
@@ -198,12 +198,57 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 {
 	GameObject *testObject = [gameObjects objectForKey:testObjectKey];
 	NSMutableSet *result = [NSMutableSet set];
-	
+/*	
 	CGRect testRect = CGRectMake(
 								 testObject.x - 0.5 * testObject.width,
 								 testObject.y - 0.5 * testObject.height,
 								 testObject.width,
 								 testObject.height);
+*/	
+	CGRect testRect = [testObject.layer frame];
+
+	for (NSString *gameObjectKey in gameObjects)
+	{
+		if ([gameObjectKey isEqualToString:testObjectKey] ||
+			[gameObjectKey rangeOfString:prefix].location != 0)
+		{
+			continue;
+		}
+		
+		GameObject *gameObject = [gameObjects objectForKey:gameObjectKey];
+/*		CGRect gameRect = CGRectMake(
+									 gameObject.x - 0.5 * gameObject.width,
+									 gameObject.y - 0.5 * gameObject.height,
+									 gameObject.width,
+									 gameObject.height);
+		
+*/
+	CGRect gameRect = [gameObject.layer frame];
+
+	if (CGRectIntersectsRect(gameRect, testRect))
+		{
+			[result addObject:gameObjectKey];
+		}
+	}
+	
+	return result;
+}
+
+
+//
+- (NSSet *)collideObjectsWithKeyPrefixObject:(NSString *)prefix withObjectForKey:(NSString *)testObjectKey
+{
+	GameObject *testObject = [gameObjects objectForKey:testObjectKey];
+	NSMutableSet *result = [NSMutableSet set];
+	
+/*	CGRect testRect = CGRectMake(
+								 testObject.x - 0.5 * testObject.width,
+								 testObject.y - 0.5 * testObject.height,
+								 testObject.width,
+								 testObject.height);
+ */
+	CGRect testRect = [testObject.layer frame];
+
 	
 	for (NSString *gameObjectKey in gameObjects)
 	{
@@ -214,20 +259,24 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 		}
 		
 		GameObject *gameObject = [gameObjects objectForKey:gameObjectKey];
-		CGRect gameRect = CGRectMake(
+/*		CGRect gameRect = CGRectMake(
 									 gameObject.x - 0.5 * gameObject.width,
 									 gameObject.y - 0.5 * gameObject.height,
 									 gameObject.width,
 									 gameObject.height);
 		
+*/
+		CGRect gameRect = [gameObject.layer frame];
 		if (CGRectIntersectsRect(gameRect, testRect))
 		{
-			[result addObject:gameObjectKey];
+			[result addObject:gameObject];
+		//	return gameObject;
 		}
 	}
 	
 	return result;
 }
+
 
 
 - (NSSet *)collideObjectsWithKeyPrefix:(NSString *)prefix withPoint:(CGPoint)testPoint
@@ -247,18 +296,17 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 		
 		
 		GameObject *gameObject = [gameObjects objectForKey:gameObjectKey];
-		double x = gameObject.x * gameHeight;
-		double y = gameObject.y * gameHeight;
-		double width = gameObject.width * gameHeight;
-		double height = gameObject.height * gameHeight;
+		double x = gameObject.x;
+		double y = gameObject.y;
+		double width = gameObject.width;// * gameHeight;
+		double height = gameObject.height;// * gameHeight;
 		
-		CGRect gameRect = CGRectMake(
-									 x,
-									 y,
-									 width,
-									 height);
+//		CGRect gameRect = CGRectMake(	 x,			 y,								 width,									 height);
 		
-		if (CGRectContainsPoint(gameRect, testPoint))
+		CALayer* layer = gameObject.layer;
+		CGRect frame = [layer frame];
+		
+		if (CGRectContainsPoint(frame, testPoint))
 		{
 			[result addObject:gameObjectKey];
 		}
@@ -266,6 +314,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 	
 	return result;
 }
+
+
 
 #pragma mark Game Loops
 

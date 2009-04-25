@@ -37,6 +37,8 @@
 		2BBAB2260F9AFD7A00E3FC14 /* QuartzUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBAB2250F9AFD7A00E3FC14 /* QuartzUtils.m */; };
 		2BBAB2350F9AFDCD00E3FC14 /* GGBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBAB2340F9AFDCD00E3FC14 /* GGBUtils.m */; };
 		2BBAB3410F9B06BD00E3FC14 /* back2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BBAB3400F9B06BD00E3FC14 /* back2.png */; };
+		2BD0FF1F0FA2C1AA001BA95D /* head.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0FF1E0FA2C1AA001BA95D /* head.png */; };
+		2BD0FF2E0FA2C282001BA95D /* head2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BD0FF2D0FA2C282001BA95D /* head2.png */; };
 		FBBFBB830EA94FED00019F43 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBBFBB820EA94FEC00019F43 /* QuartzCore.framework */; };
 		FBBFBB850EA9501200019F43 /* clipartPlane.png in Resources */ = {isa = PBXBuildFile; fileRef = FBBFBB840EA9501200019F43 /* clipartPlane.png */; };
 /* End PBXBuildFile section */
@@ -87,6 +89,8 @@
 		2BBAB2330F9AFDCD00E3FC14 /* GGBUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBUtils.h; sourceTree = "<group>"; };
 		2BBAB2340F9AFDCD00E3FC14 /* GGBUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBUtils.m; sourceTree = "<group>"; };
 		2BBAB3400F9B06BD00E3FC14 /* back2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back2.png; sourceTree = "<group>"; };
+		2BD0FF1E0FA2C1AA001BA95D /* head.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head.png; sourceTree = "<group>"; };
+		2BD0FF2D0FA2C282001BA95D /* head2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = head2.png; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* ianimate_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ianimate_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBBFBB820EA94FEC00019F43 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -165,6 +169,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2BD0FF2D0FA2C282001BA95D /* head2.png */,
+				2BD0FF1E0FA2C1AA001BA95D /* head.png */,
 				2B8597540F9EA5B6001EEF33 /* bubble.png */,
 				2B8F1F220F9BF29100A62EB6 /* Pop.aiff */,
 				2B8F1EA20F9BEEA900A62EB6 /* sample.mp3 */,
@@ -276,6 +282,8 @@
 				2B8F1EA30F9BEEA900A62EB6 /* sample.mp3 in Resources */,
 				2B8F1F230F9BF29100A62EB6 /* Pop.aiff in Resources */,
 				2B8597550F9EA5B6001EEF33 /* bubble.png in Resources */,
+				2BD0FF1F0FA2C1AA001BA95D /* head.png in Resources */,
+				2BD0FF2E0FA2C282001BA95D /* head2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

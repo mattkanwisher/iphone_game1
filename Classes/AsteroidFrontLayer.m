@@ -45,10 +45,10 @@
 	GameObject *gameObject = [[[GameData sharedGameData] gameObjects] objectForKey:gameObjectKey];
 	double gameHeight = [[GameData sharedGameData] gameHeight];
 
-	double x = gameObject.x * gameHeight;
-	double y = gameObject.y * gameHeight;
-	double width = gameObject.width * gameHeight;
-	double height = gameObject.height * gameHeight;
+	double x = gameObject.x;// * gameHeight;
+	double y = gameObject.y;// * gameHeight;
+	double width = gameObject.width;// * gameHeight;
+	double height = gameObject.height;// * gameHeight;
 	BOOL visible = gameObject.visible;
 	
 	angle += angularVelocity * gameObject.lastUpdateInterval;
@@ -59,7 +59,7 @@
 
 	self.bounds = CGRectMake(0, 0, width, height);
 	self.position = CGPointMake(x, y);
-	self.transform = CATransform3DMakeRotation(angle, 0, 0, 1.0);
+	//self.transform = NULL;//CATransform3DMakeRotation(0, 0, 0, 1.0);//(angle, 0, 0, 1.0);
 	self.hidden = !visible;
 }
 

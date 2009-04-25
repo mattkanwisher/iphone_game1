@@ -27,12 +27,15 @@ const double GAME_OBJECT_BOUNDARY_EXCESS = 0.1;
 @synthesize lastUpdateInterval;
 @synthesize visible;
 @synthesize imageName;
-
+@synthesize lastCollision;
+@synthesize layer;
 
 const NSInteger GAME_LIVES = 3;
 const double GAME_ASPECT = 16.0 / 10.0;
 const double GAME_PREPARE_DELAY = 1.5;
 const double GAME_UPDATE_DURATION = 0.03;
+const double GAME_WIDTH=320;
+const double GAME_HEIGHT=480;
 
 //
 // initWithImageName:xFraction:yFraction:widthFraction:heightFraction:visible:
@@ -60,6 +63,7 @@ const double GAME_UPDATE_DURATION = 0.03;
 		speed = 0;
 		trajectory = 0;
 		lastUpdateInterval = 0;
+		lastCollision = 0;
 	}
 
 	return self;
@@ -76,25 +80,44 @@ const double GAME_UPDATE_DURATION = 0.03;
 //
 - (BOOL)updateWithTimeInterval:(NSTimeInterval)timeInterval
 {
-	x += timeInterval * speed * cos(trajectory);
-	y += timeInterval * speed * sin(trajectory);
+//	double bangle = 70;
+	trajectory = angle * M_PI / 180; 
+	double xchange = timeInterval * speed * cos(trajectory);
+	double ychange = timeInterval * speed * sin(trajectory);
+	x += xchange;
+	y += ychange;
 	
-	if (x > GAME_ASPECT + (0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
+	if (x > GAME_WIDTH)//GAME_ASPECT + (0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
 	{
-		x = -0.5 * width;
+		//x = -0.5 * width;
+		angle = angle + 180;
 	}
-	else if (x < -(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
+	else if (x < 0)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
 	{
-		x = GAME_ASPECT + width;
+		//x = GAME_ASPECT + width;
+		angle = angle + 180;
 	}
 	
-	if (y > 1.0 + (0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
+	if (y > 1.0 + GAME_HEIGHT)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
 	{
-		y = -0.5 * height;
+		//y = -0.5 * height;
+		angle = angle + 180;
 	}
-	else if (y < -(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
+	else if (y < 0)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
 	{
-		y = 1.0 + 0.5 * height;
+//		y = 1.0 + 0.5 * height;
+		angle = angle + 180;
+		//if(lastCollision > 0) {
+		//	angle = angle -180;
+		//	lastCollision = 1;
+	//	}
+	}
+	
+	if(lastCollision > 0) {
+		lastCollision += lastUpdateInterval;
+	}
+	if( lastCollision > 1.4 ) {
+		lastCollision = 0;
 	}
 	
 	lastUpdateInterval = timeInterval;

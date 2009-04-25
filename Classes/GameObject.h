@@ -24,8 +24,10 @@
 	double height;
 	double speed;
 	double trajectory;
+	double lastCollision;
 	double lastUpdateInterval;
 	BOOL visible;
+	CALayer* layer;
 }
 
 @property (nonatomic, retain) NSString *keyInGameData;
@@ -35,9 +37,11 @@
 @property double width;
 @property double height;
 @property double speed;
+@property double lastCollision;
 @property double trajectory;
 @property double lastUpdateInterval;
 @property BOOL visible;
+@property (nonatomic, retain) CALayer* layer;
 @property (nonatomic, retain) NSString *imageName;
 
 - (id)initWithImageName:(NSString *)newImageName

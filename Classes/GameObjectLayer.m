@@ -46,20 +46,21 @@
 - (void)update
 {
 	GameObject *gameObject = [[[GameData sharedGameData] gameObjects] objectForKey:gameObjectKey];
+	gameObject.layer = self;
 	double gameHeight = [[GameData sharedGameData] gameHeight];
 
 	NSString *gameObjectImageName = gameObject.imageName;
-	double x = gameObject.x * gameHeight;
-	double y = gameObject.y * gameHeight;
-	double width = gameObject.width * gameHeight;
-	double height = gameObject.height * gameHeight;
+	double x = gameObject.x;
+	double y = gameObject.y;
+	double width = gameObject.width; //* gameHeight;
+	double height = gameObject.height;// * gameHeight;
 	double angle = gameObject.angle;
 	BOOL visible = gameObject.visible;
 
 	self.imageName = gameObjectImageName;
 	self.bounds = CGRectMake(0, 0, width, height);
 	self.position = CGPointMake(x, y);
-	self.transform = CATransform3DMakeRotation(angle, 0, 0, 1.0);
+	//self.transform = CATransform3DMakeRotation(angle, 0, 0, 1.0);
 	self.hidden = !visible;
 }
 

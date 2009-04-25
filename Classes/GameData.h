@@ -52,6 +52,7 @@
 - (NSString *)keyForAsteroidAtIndex:(NSInteger)asteroidIndex;
 - (NSSet *)collideObjectsWithKeyPrefix:(NSString *)prefix withObjectForKey:(NSString *)testObjectKey;
 - (NSSet *)collideObjectsWithKeyPrefix:(NSString *)prefix withPoint:(CGPoint)testPoint;
+- (NSSet *)collideObjectsWithKeyPrefixObject:(NSString *)prefix withObjectForKey:(NSString *)testObjectKey;
 - (void)preparationDelayWithMessage:(NSString *)message;
 
 @end

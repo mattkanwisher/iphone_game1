@@ -17,7 +17,6 @@
 }
 
 + (void)spawnNewAsteroidsReplacing:(NSString *)existingAsteroidKey;
-+ (void)spawnNewAsteroids;
 
 
 @end

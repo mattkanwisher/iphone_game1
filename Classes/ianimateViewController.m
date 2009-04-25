@@ -59,6 +59,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	speed = 0;
 	trajectory = 0;
 	bdone = false;
+	spawnCouner = 0;
 	
 	
 	updateSelector = @selector(updateLevel:);
@@ -99,7 +100,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	[ player prepareToPlay ];
 	
 	
-	[ player play ];
+	//[ player play ];
 
 	
 	[[GameData sharedGameData] newGame];
@@ -257,9 +258,10 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 - (void)updateLevel2:(NSTimer *)aTimer
 {
 	NSLog(@"updateLevel2");
-//	if(bdone == false) {
+	if(spawnCouner < 4) {
 		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
-//	}	
+		spawnCouner++;
+	}	
 	
 }	
 

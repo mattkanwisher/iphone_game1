@@ -23,42 +23,35 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 @implementation LittleDudeObject
 
 
-+ (void)spawnNewAsteroids
+- (BOOL)collide
 {
-	
-	double x;
-	double y;
-	double size;
-	
-	double angle = 2.0 * M_PI * (double)random() / (double)INT_MAX;
-	x = 0.5 * GAME_ASPECT + ASTEROID_START_RADIUS * cos(angle);
-	y = 0.5 + ASTEROID_START_RADIUS * sin(angle);
-	
-	
-	NSInteger newAsteroidIndex = [[[[GameData sharedGameData] gameData]
-								   objectForKey:GAME_DATA_ASTEROIDS_CREATED_KEY] integerValue];
-	[[GameData sharedGameData]
-	 setGameDataObject:[NSNumber numberWithInteger:newAsteroidIndex + 1]
-	 forKey:GAME_DATA_ASTEROIDS_CREATED_KEY];
-	
-	LittleDudeObject *asteroid = [[LittleDudeObject alloc]
-								  initWithImageName:@"little-dude.png"//"little-dude"
-								  x:x
-								  y:y
-								  width:size
-								  height:size
-								  visible:YES];
-	[[GameData sharedGameData]
-	 addGameObject:asteroid
-	 forKey:[[GameData sharedGameData] keyForAsteroidAtIndex:newAsteroidIndex]];
-	
-	asteroid.trajectory = 2.0 * M_PI * (double)random() / (double)INT_MAX;
-	asteroid.speed =
-	ASTEROID_MIN_SPEED +
-	(ASTEROID_MAX_SPEED - ASTEROID_MIN_SPEED) *
-	(double)random() / (double)INT_MAX;
+	GameObject *collision = [[[GameData sharedGameData]
+							collideObjectsWithKeyPrefixObject:GAME_ASTEROID_KEY_BASE
+							withObjectForKey:keyInGameData]
+						   anyObject];
+	if (collision)
+	{
+		//&& collision.collided == NO
+		if(lastCollision == 0 && collision.lastCollision == 0) {
+			//NSLog(@"%@ collided with %@", keyInGameData, collision.keyInGameData);
+			double tmpangle = collision.angle;
+			collision.angle = angle - 125;
+			angle = tmpangle + 125;
+//			collision.angle += 125;
+//			angle += 125;
+			lastCollision = 1;
+			collision.lastCollision	 = 1;
+		}
 
+//		angle = collision.angle + 180;
+//		trajectory = (angle *( M_PI * 2))/360;//2.0 * M_PI * (double)random() / (double)INT_MAX;
+
+		return NO; //Only shots from the player will kill bubbles
+	}
+	return NO;
 }
+
+
 //
 // spawnNewAsteroidsReplacing:
 //
@@ -118,6 +111,8 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 		size = ASTEROID_LARGE_SIZE;
 	}
 	
+	size = 60;
+
 	NSInteger level = [[[[GameData sharedGameData] gameData] objectForKey:GAME_DATA_LEVEL_KEY] integerValue];
 	NSInteger i;
 	//ASTEROID_BASE_NUM
@@ -125,9 +120,8 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 	{
 		if (!existingAsteroidKey)
 		{
-			double angle = 2.0 * M_PI * (double)random() / (double)INT_MAX;
-			x = 0.5 * GAME_ASPECT + ASTEROID_START_RADIUS * cos(angle);
-			y = 0.5 + ASTEROID_START_RADIUS * sin(angle);
+			x = random() % 200;
+			y = random() % 200;
 		}
 		
 		NSInteger newAsteroidIndex = [[[[GameData sharedGameData] gameData]
@@ -138,21 +132,25 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 
 		
 		LittleDudeObject *asteroid = [[LittleDudeObject alloc]
-			initWithImageName:@"bubble.png"//"little-dude"
+			initWithImageName:@"head2.png"//"little-dude"
 			x:x
 			y:y
 			width:size
 			height:size
   		     visible:YES];//existingAsteroidKey ? YES : NO];
+			asteroid.angle = 135;
+
 		[[GameData sharedGameData]
 			addGameObject:asteroid
 			forKey:[[GameData sharedGameData] keyForAsteroidAtIndex:newAsteroidIndex]];
 		
-		asteroid.trajectory = 2.0 * M_PI * (double)random() / (double)INT_MAX;
-		asteroid.speed =
+		asteroid.trajectory = asteroid.angle * M_PI/180; //2.0 * M_PI * (double)random() / (double)INT_MAX;
+		asteroid.speed = 85;
+		/*
 			ASTEROID_MIN_SPEED +
 			(ASTEROID_MAX_SPEED - ASTEROID_MIN_SPEED) *
 				(double)random() / (double)INT_MAX;
+		 */
 	}
 }
 

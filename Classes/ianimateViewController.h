@@ -44,6 +44,7 @@
 	double trajectory;
 	double speed;
 	double angle;
+	double spawnCouner;
 	
 	
 	NSTimeInterval frameDuration;
@@ -52,7 +53,6 @@
 
 
 
--(IBAction)movePlane:(id)sender;
 - (void)drawBackground;
 - (void)DrawTransparentCover;
 
