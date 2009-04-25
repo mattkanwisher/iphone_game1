@@ -1,5 +1,5 @@
 //
-//  AsteroidObject.h
+//  PlayerObject.h
 //  Quartzeroids2
 //
 //  Created by Matt Gallagher on 15/02/09.
@@ -11,13 +11,11 @@
 
 #import "GameObject.h"
 
-@interface LittleDudeObject : GameObject
+@interface PlayerObject : GameObject
 {
-
+	double shotCooldown;
 }
 
-+ (void)spawnNewAsteroidsReplacing:(NSString *)existingAsteroidKey;
-+ (void)blowup:(NSString *)existingAsteroidKey;
-
++ (void)spawnPlayer;
 
 @end

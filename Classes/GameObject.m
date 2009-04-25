@@ -90,23 +90,23 @@ const double GAME_HEIGHT=480;
 	if (x > GAME_WIDTH)//GAME_ASPECT + (0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
 	{
 		//x = -0.5 * width;
-		angle = angle + 180;
+		angle = angle + 180+ (random() % 10);
 	}
 	else if (x < 0)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * width)
 	{
 		//x = GAME_ASPECT + width;
-		angle = angle + 180;
+		angle = angle + 180+ (random() % 10);
 	}
 	
 	if (y > 1.0 + GAME_HEIGHT)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
 	{
 		//y = -0.5 * height;
-		angle = angle + 180;
+		angle = angle + 180+ (random() % 10);
 	}
 	else if (y < 0)//(0.5 + GAME_OBJECT_BOUNDARY_EXCESS) * height)
 	{
 //		y = 1.0 + 0.5 * height;
-		angle = angle + 180;
+		angle = angle + 180+ (random() % 10);
 		//if(lastCollision > 0) {
 		//	angle = angle -180;
 		//	lastCollision = 1;
@@ -116,7 +116,7 @@ const double GAME_HEIGHT=480;
 	if(lastCollision > 0) {
 		lastCollision += lastUpdateInterval;
 	}
-	if( lastCollision > 1.4 ) {
+	if( lastCollision > 1.5 ) {
 		lastCollision = 0;
 	}
 	

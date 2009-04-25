@@ -35,8 +35,8 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 		if(lastCollision == 0 && collision.lastCollision == 0) {
 			//NSLog(@"%@ collided with %@", keyInGameData, collision.keyInGameData);
 			double tmpangle = collision.angle;
-			collision.angle = angle - 125;
-			angle = tmpangle + 125;
+			collision.angle = angle - 125 + (random() % 10);
+			angle = tmpangle + 125 + (random() % 10);
 //			collision.angle += 125;
 //			angle += 125;
 			lastCollision = 1;
@@ -52,7 +52,32 @@ const NSInteger ASTEROID_BASE_NUM = 3;
 }
 
 
+//TODO Add a blowup gfx
++ (void)blowup:(NSString *)existingAsteroidKey
+{
+	double x;
+	double y;
+	double size;
+
+	
+	NSInteger destroyedCount =
+	[[[[GameData sharedGameData] gameData]
+	  objectForKey:GAME_DATA_ASTEROIDS_DESTROYED_KEY] integerValue];
+	destroyedCount += 1;
+	[[GameData sharedGameData]
+	 setGameDataObject:[NSNumber numberWithInteger:destroyedCount]
+	 forKey:GAME_DATA_ASTEROIDS_DESTROYED_KEY];
+	
+	GameObject *existing = [[[GameData sharedGameData] gameObjects] objectForKey:existingAsteroidKey];
+	size = existing.width;
+	x = existing.x;
+	y = existing.y;
+	
+	[[GameData sharedGameData] removeGameObjectForKey:existingAsteroidKey];	
+}
+
 //
+
 // spawnNewAsteroidsReplacing:
 //
 // Creates new asteroids. If existingAsteroidKey is nil, level + 1 asteroids

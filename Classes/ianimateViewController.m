@@ -16,6 +16,7 @@
 #import	"QuartzUtils.h"
 #import "GGBUtils.h"
 #import "GGBTextLayer.h"
+#import "PlayerObject.h"
 
 @implementation ianimateViewController
 
@@ -127,6 +128,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
+
+	[PlayerObject spawnPlayer];
 
 	
     [super viewDidLoad];
@@ -257,9 +260,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 - (void)updateLevel2:(NSTimer *)aTimer
 {
-	NSLog(@"updateLevel2");
-	if(spawnCouner < 4) {
-		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
+\	if(spawnCouner < 4) {
+//		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 		spawnCouner++;
 	}	
 	
@@ -296,6 +298,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+	[[GameData sharedGameData] setShootKeyDown:YES];
     UITouch *touch = touches.anyObject;
 	CGPoint startPos = [touch locationInView: self.view];
 
