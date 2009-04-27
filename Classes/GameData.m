@@ -436,12 +436,12 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 // Resets the game array, creates a new player object. Doesn't start a new
 // level.
 //
-- (void)newGame
+- (void)newGame:(BOOL)spawnPlayer
 {
 	[gameData setObject:[NSNumber numberWithInteger:GAME_LIVES] forKey:GAME_DATA_LIVES_KEY];
 	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_LEVEL_KEY];
 	
-	[self newLevel];
+	[self newLevel:spawnPlayer];
 }
 
 //
@@ -450,7 +450,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 // Resets the game array, creates a new player object. Doesn't start a new
 // level.
 //
-- (void)newLevel
+- (void)newLevel:(BOOL)spawnPlayer
 {
 	[gameObjects removeAllObjects];
 	
@@ -463,7 +463,9 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_CREATED_KEY];
 	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_DESTROYED_KEY];
 	
-	[PlayerObject spawnPlayer];
+	if(spawnPlayer == YES) {
+		[PlayerObject spawnPlayer];
+	}
 	
 	for(int i = 0;i<level;i++) {
 		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
@@ -474,6 +476,31 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 
 	
 }
+
+
+- (void)demoMode
+{
+	[gameData setObject:[NSNumber numberWithInteger:GAME_LIVES] forKey:GAME_DATA_LIVES_KEY];
+	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_LEVEL_KEY];
+	
+	[gameObjects removeAllObjects];
+	
+	NSInteger level = [[gameData objectForKey:GAME_DATA_LEVEL_KEY] integerValue];
+	level += 1;
+	
+	[gameData setObject:[NSNumber numberWithInteger:level] forKey:GAME_DATA_LEVEL_KEY];
+	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_NEXT_SHOT_INDEX_KEY];
+	[gameData setObject:[NSNumber numberWithDouble:0] forKey:GAME_DATA_SHOT_COOLDOWN_KEY];
+	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_CREATED_KEY];
+	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_DESTROYED_KEY];
+	
+	
+	for(int i = 0;i<level;i++) {
+		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
+	}
+		
+}
+
 
 //
 // preparationDelayWithMessage:

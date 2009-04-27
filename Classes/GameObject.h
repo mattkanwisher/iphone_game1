@@ -11,7 +11,7 @@
 
 //#import <Cocoa/Cocoa.h>
 
-
+#import "GameObjectLayer.h"
 
 @interface GameObject : NSObject
 {
@@ -29,7 +29,7 @@
 	double diff_angle;
 	double last_angle;
 	BOOL visible;
-	CALayer* layer;
+	GameObjectLayer* layer;
 }
 
 @property (nonatomic, retain) NSString *keyInGameData;
@@ -45,7 +45,7 @@
 @property BOOL visible;
 @property double last_angle;
 @property double diff_angle;
-@property (nonatomic, retain) CALayer* layer;
+@property (nonatomic, retain) GameObjectLayer* layer;
 @property (nonatomic, retain) NSString *imageName;
 
 - (id)initWithImageName:(NSString *)newImageName

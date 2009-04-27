@@ -115,7 +115,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 	is_gameRunning = NO;
 	
-	[[GameData sharedGameData] newGame];
+	[[GameData sharedGameData] newGame:NO];
 
 	angle = 45;
 	
@@ -229,6 +229,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 - (void)clearLogo:(NSTimer *)aTimer
 {
 	[logo setHidden:YES];
+	//TODO: kill this timer!!@@#!@
 }
 
 - (void)updateLevel2:(NSTimer *)aTimer
@@ -281,8 +282,8 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	radians= radians - (M_PI /2);
 	[GameData sharedGameData].upKeyDown = YES;
 	ship.angle = line_angle;
-	//ship.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1.0);
-	ship.layer.transform = CATransform3DMakeRotation(ship.angle, 0, 0, 1.0);
+	ship.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1.0);
+	ship.layer.transform = CATransform3DMakeRotation(radians, 0, 0, 1.0);
 		
 }	
 
@@ -331,7 +332,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	[buttonContainerView setHidden:YES];
 //	[contentView becomeFirstResponder];
 	
-	[[GameData sharedGameData] newGame];
+	[[GameData sharedGameData] newGame:YES];
 	is_gameRunning = YES;
 }
 

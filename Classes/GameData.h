@@ -40,8 +40,9 @@
 - (NSDictionary *)gameObjects;
 - (double)gameWidth;
 - (double)gameHeight;
-- (void)newGame;
-- (void)newLevel;
+- (void)newGame:(BOOL)spawnPlayer;
+- (void)demoMode;
+- (void)newLevel:(BOOL)spawnPlayer;
 - (void)endGame;
 - (void)startUpdates;
 - (void)stopUpdates;

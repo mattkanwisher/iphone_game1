@@ -58,7 +58,6 @@
 
 
 - (void)drawBackground;
-- (void)DrawTransparentCover;
 - (void)MoveShipFromTouch:(CGPoint)startPos;
 - (IBAction)newGame:(id)sender;
 - (IBAction)launchWebsite:(id)sender;
