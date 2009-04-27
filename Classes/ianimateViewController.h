@@ -21,6 +21,7 @@
 	IBOutlet UIImageView *background;
 	IBOutlet UIView *backgroundView;
 	IBOutlet UIView *logo;
+	IBOutlet UIView *highscoreView;
 
 	CALayer *backgroundLayer;
 	
@@ -59,6 +60,9 @@
 - (void)DrawTransparentCover;
 - (void)MoveShipFromTouch:(CGPoint)startPos;
 - (IBAction)newGame:(id)sender;
+- (IBAction)launchWebsite:(id)sender;
+- (IBAction)showHighscore:(id)sender;
+- (IBAction)hideHighscore:(id)sender;
 
 @end
 

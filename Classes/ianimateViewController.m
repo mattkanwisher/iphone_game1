@@ -338,6 +338,24 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	[buttonContainerView setHidden:NO];
 }
 
+- (IBAction)launchWebsite:(id)sender
+{
+  [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.hyperworks.nu"]];
+}
+
+- (IBAction)showHighscore:(id)sender
+{
+	[highscoreView setHidden:NO];
+	[buttonContainerView setHidden:YES];
+	//Populate it here ;), i know its ghetto but i dont feel like breaking out a seperate controller yer
+}
+
+- (IBAction)hideHighscore:(id)sender
+{
+	[highscoreView setHidden:YES];
+	[buttonContainerView setHidden:NO];
+}
+
 
 - (void)dealloc {
     [super dealloc];
