@@ -47,6 +47,7 @@
 	double speed;
 	double angle;
 	double spawnCouner;
+	BOOL is_gameRunning;
 	
 	
 	NSTimeInterval frameDuration;

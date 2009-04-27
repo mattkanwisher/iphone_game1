@@ -16,6 +16,7 @@
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* ianimateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* ianimateViewController.m */; };
 		2B4DD2790F786253004F44C2 /* AccelerometerSimulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4DD2780F786253004F44C2 /* AccelerometerSimulation.m */; };
+		2B5F15EB0FA552EF008023B0 /* space_back.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B5F15EA0FA552EF008023B0 /* space_back.png */; };
 		2B6461830F9AD97000B8B23D /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6461820F9AD97000B8B23D /* GameData.m */; };
 		2B6461B70F9ADB5F00B8B23D /* GameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6461B60F9ADB5F00B8B23D /* GameObject.m */; };
 		2B6461C50F9ADBFB00B8B23D /* LittleDudeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B6461C40F9ADBFB00B8B23D /* LittleDudeObject.m */; };
@@ -63,6 +64,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2B4DD2770F786253004F44C2 /* AccelerometerSimulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerSimulation.h; sourceTree = "<group>"; };
 		2B4DD2780F786253004F44C2 /* AccelerometerSimulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerSimulation.m; sourceTree = "<group>"; };
+		2B5F15EA0FA552EF008023B0 /* space_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space_back.png; sourceTree = "<group>"; };
 		2B6461810F9AD97000B8B23D /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
 		2B6461820F9AD97000B8B23D /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
 		2B6461940F9AD9D600B8B23D /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B5F15EA0FA552EF008023B0 /* space_back.png */,
 				2BFB11B00FA53D87004FAC20 /* intrologo.png */,
 				2BFB0FC40FA4F185004FAC20 /* ship2.png */,
 				2BFB0D9B0FA3C806004FAC20 /* ship.png */,
@@ -310,6 +313,7 @@
 				2BFB0D9C0FA3C806004FAC20 /* ship.png in Resources */,
 				2BFB0FC50FA4F185004FAC20 /* ship2.png in Resources */,
 				2BFB11B10FA53D87004FAC20 /* intrologo.png in Resources */,
+				2B5F15EB0FA552EF008023B0 /* space_back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

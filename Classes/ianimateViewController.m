@@ -113,6 +113,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	//[logo setHidden:YES];
 
 
+	is_gameRunning = NO;
 	
 	[[GameData sharedGameData] newGame];
 
@@ -247,7 +248,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	
 	
 	backgroundLayer = 	[[[ImageLayer alloc]
-						  initWithImageNamed:@"girl.png"
+						  initWithImageNamed:@"space_back.png"
 						  frame:CGRectZero]
 						 autorelease];
 	
@@ -274,21 +275,21 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	//double line_angle  = atan2(ship.y - startPos.y, ship.x - startPos.x) *  180/ M_PI;
 	double line_angle  = atan2(startPos.y - ship.y,startPos.x -  ship.x) *  180/ M_PI;
 	double radians = atan2(ship.y - startPos.y, ship.x - startPos.x);//atan2(startPos.y - ship.y,startPos.x -  ship.x);
-	//NSLog(@"Angle - %f", line_angle);
-	//NSLog(@"radians - %f", radians);
+	NSLog(@"Angle - %f", line_angle);
+	NSLog(@"radians - %f", radians);
 	
 	radians= radians - (M_PI /2);
 	[GameData sharedGameData].upKeyDown = YES;
 	ship.angle = line_angle;
-	ship.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1.0);
-	ship.layer.transform = CATransform3DMakeRotation(radians, 0, 0, 1.0);
+	//ship.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1.0);
+	ship.layer.transform = CATransform3DMakeRotation(ship.angle, 0, 0, 1.0);
 		
 }	
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	[[GameData sharedGameData] endGame];
-	return;
+	if( is_gameRunning == NO) 
+		return;
 	
     UITouch *touch = touches.anyObject;
 	CGPoint startPos = [touch locationInView: self.view];
@@ -305,6 +306,9 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
 	
+	if( is_gameRunning == NO) 
+		return;
+
 	UITouch *touch = [touches anyObject];
 	CGPoint startPos = [touch locationInView: self.view];
 	
@@ -314,6 +318,9 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	
+	if( is_gameRunning == NO) 
+		return;
+
 	UITouch *touch = [touches anyObject];
 }	
 
@@ -325,6 +332,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 //	[contentView becomeFirstResponder];
 	
 	[[GameData sharedGameData] newGame];
+	is_gameRunning = YES;
 }
 
 
@@ -336,6 +344,7 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 - (IBAction)gameEnded:(id)sender
 {
 	[buttonContainerView setHidden:NO];
+	is_gameRunning = NO;
 }
 
 - (IBAction)launchWebsite:(id)sender

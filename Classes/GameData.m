@@ -10,7 +10,7 @@
 //
 
 #import "GameData.h"
-//#import "PlayerObject.h"
+#import "PlayerObject.h"
 #import "LittleDudeObject.h"
 #import "SynthesizeSingleton.h"
 #include <Foundation/Foundation.h>
@@ -56,7 +56,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 		gameData = [[NSMutableDictionary alloc] init];
 		
 		[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_LIVES_KEY];
-		[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_LEVEL_KEY];
+		[gameData setObject:[NSNumber numberWithInteger:-1] forKey:GAME_DATA_LEVEL_KEY];
 		
 		srandom((unsigned)(mach_absolute_time() & 0xFFFFFFFF));
 	}
@@ -463,9 +463,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_CREATED_KEY];
 	[gameData setObject:[NSNumber numberWithInteger:0] forKey:GAME_DATA_ASTEROIDS_DESTROYED_KEY];
 	
-//	[PlayerObject spawnPlayer];
+	[PlayerObject spawnPlayer];
 	
-//	[AsteroidObject spawnNewAsteroidsReplacing:nil];
+	for(int i = 0;i<level;i++) {
+		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
+	}
 	
 	[self preparationDelayWithMessage:[NSString stringWithFormat:@"Prepare for level %ld...", level]];
 
@@ -498,6 +500,8 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(GameData);
 	[gameData setObject:@"Game Over" forKey:GAME_DATA_MESSAGE_KEY];
 	[[NSNotificationCenter defaultCenter]
 	 postNotificationName:GAME_OVER_NOTIFICATION object:self];
+	
+	[gameData setObject:[NSNumber numberWithInteger:-1] forKey:GAME_DATA_LEVEL_KEY];
 }
 
 //
