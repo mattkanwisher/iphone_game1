@@ -20,6 +20,7 @@
 	IBOutlet UIImageView *plane2;
 	IBOutlet UIImageView *background;
 	IBOutlet UIView *backgroundView;
+	IBOutlet UIView *logo;
 
 	CALayer *backgroundLayer;
 	
@@ -34,7 +35,7 @@
 	NSTimer *timer;
 	NSTimer *timer2;
 	NSDate *lastUpdate;
-	SEL updateSelector;
+	SEL clearlogoSelector;
 	SEL updateSelector2;
 
 	double x;
@@ -49,12 +50,15 @@
 	
 	NSTimeInterval frameDuration;
 	AVAudioPlayer *player;
+	IBOutlet UIView *buttonContainerView;
 }
 
 
 
 - (void)drawBackground;
 - (void)DrawTransparentCover;
+- (void)MoveShipFromTouch:(CGPoint)startPos;
+- (IBAction)newGame:(id)sender;
 
 @end
 

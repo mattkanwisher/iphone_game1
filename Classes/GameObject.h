@@ -26,6 +26,8 @@
 	double trajectory;
 	double lastCollision;
 	double lastUpdateInterval;
+	double diff_angle;
+	double last_angle;
 	BOOL visible;
 	CALayer* layer;
 }
@@ -41,6 +43,8 @@
 @property double trajectory;
 @property double lastUpdateInterval;
 @property BOOL visible;
+@property double last_angle;
+@property double diff_angle;
 @property (nonatomic, retain) CALayer* layer;
 @property (nonatomic, retain) NSString *imageName;
 

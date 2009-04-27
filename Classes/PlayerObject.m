@@ -14,9 +14,9 @@
 #import "ShotObject.h"
 #import "LittleDudeObject.h"
 
-const double PLAYER_ACCELERATION = 0.25;
+const double PLAYER_ACCELERATION = 100;
 const double PLAYER_ANGULAR_SPEED = 1.25;
-const double PLAYER_MAX_SPEED = 0.333;
+const double PLAYER_MAX_SPEED = 300;
 const double PLAYER_SIZE = 45;
 const double PLAYER_SHOT_COOLDOWN = 0.125;
 const double PLAYER_SHOT_SPEED = 0.45;
@@ -47,6 +47,8 @@ const NSInteger PLAYER_MAX_SHOTS = 5;
 
 	[[GameData sharedGameData] addGameObject:player forKey:GAME_PLAYER_KEY];
 }
+
+#define RADIANS( degrees ) ( degrees * M_PI / 180 )
 
 //
 // updateWithTimeInterval:
@@ -105,12 +107,17 @@ const NSInteger PLAYER_MAX_SHOTS = 5;
 		
 		if (!existingShot)
 		{
-			//x + 0.5 * width * cos(angle + M_PI_2)
-			//y + 0.5 * height * sin(angle + M_PI_2)
+			
+			double radians = RADIANS( angle - 40 );
+			double newX = 40 * cos(radians+ M_PI_2);
+			double newY = 40 * sin(radians + M_PI_2);
+
+			NSLog(@"r-%f,x-%f,y-%f,nx-%f,ny-%f", radians, x, y, newX, newY);
+			
 			ShotObject *newShot =
 				[[ShotObject alloc]
-					initWithX:200
-					y:200];
+					initWithX:x + newX
+					y:y + newY];
 			[[GameData sharedGameData]
 				addGameObject:newShot
 				forKey:[[GameData sharedGameData] keyForShotAtIndex:nextShotIndex]];

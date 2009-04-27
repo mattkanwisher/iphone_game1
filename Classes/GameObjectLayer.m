@@ -25,6 +25,7 @@
 	self = [super init];
 	if (self != nil)
 	{
+		alternate = YES;
 		gameObjectKey = [newGameObjectKey retain];
 		
 		[[[GameData sharedGameData] gameObjects]
@@ -55,6 +56,7 @@
 	double width = gameObject.width; //* gameHeight;
 	double height = gameObject.height;// * gameHeight;
 	double angle = gameObject.angle;
+	double diff_angle = gameObject.diff_angle;
 	BOOL visible = gameObject.visible;
 
 	self.imageName = gameObjectImageName;

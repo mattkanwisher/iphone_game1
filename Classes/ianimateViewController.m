@@ -27,7 +27,7 @@
 // Constant for the high-pass filter.
 #define kFilteringFactor 0.1
 
-const double GAME_UPDATE_DURATION2 = 0.03;
+const double LOGO_CLEAR_DURATION = 4.00;
 const double GAME_UPDATE_DURATION3 = 4.0;
 
 const double GAME_ASPECT2 = 16.0 / 10.0;
@@ -63,13 +63,21 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	spawnCouner = 0;
 	
 	
-	updateSelector = @selector(updateLevel:);
+	
+	[[NSNotificationCenter defaultCenter]
+	 addObserver:self
+	 selector:@selector(gameEnded:)
+	 name:GAME_OVER_NOTIFICATION
+	 object:nil];
+	
+	
+	clearlogoSelector = @selector(clearLogo:);
 
 	timer =
 	[NSTimer
-	 scheduledTimerWithTimeInterval:GAME_UPDATE_DURATION2
+	 scheduledTimerWithTimeInterval:LOGO_CLEAR_DURATION
 	 target:self
-	 selector:updateSelector
+	 selector:clearlogoSelector
 	 userInfo:nil
 	 repeats:YES];
 
@@ -100,8 +108,10 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	player.delegate = self;
 	[ player prepareToPlay ];
 	
-	
+	//Annoying crap for debugging
 	//[ player play ];
+	//[logo setHidden:YES];
+
 
 	
 	[[GameData sharedGameData] newGame];
@@ -124,60 +134,18 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	
 	[CATransaction commit];
 	
-	[self DrawTransparentCover];
 
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 	[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 
-	[PlayerObject spawnPlayer];
+	//[PlayerObject spawnPlayer];
 
+	
 	
     [super viewDidLoad];
 	
 }
 
-
-
-- (void)DrawTransparentCover
-{
-	[CATransaction begin];
-	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-	
-	
-	CALayer* backgroundLayer2  = nil;
-	for(int i = 0; i< 6; i ++ ) {
-	backgroundLayer2 = [CALayer layer];
-	
-	backgroundLayer2.backgroundColor = GetCGPatternNamed(@"back2.png");
-	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
-	backgroundLayer2.bounds        = CGRectMake( 0 + (i*50), 0+ (i*50), 200, 200 );//backgroundLayer.bounds;
-	backgroundLayer2.position      = CGPointMake( 0 + (i*50), 100 + (i*50));
-	backgroundLayer2.anchorPoint         = CGPointMake( 0.5, 0.5 );
-	backgroundLayer2.borderColor = GetCGPatternNamed(@"back2.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
-	backgroundLayer2.name = @"Mask";
-	backgroundLayer2.opacity = 0.98;
-	backgroundLayer2.masksToBounds   = YES;
-	[backgroundLayer addSublayer:backgroundLayer2];
-	
-	}
-
-	/*CALayer* backgroundLayer3 =[CALayer layer];
-	
-	backgroundLayer3.backgroundColor = GetCGPatternNamed(@"back2.png");
-	//backgroundLayer2.backgroundColor   = [CGColor blackColor].CGColor;
-	backgroundLayer3.bounds        = CGRectMake( 0, 0, 100, 100 );//backgroundLayer.bounds;
-	backgroundLayer3.position      = CGPointMake( 200, 200 );
-	backgroundLayer3.anchorPoint         = CGPointMake( 0.5, 0.5 );
-	backgroundLayer3.borderColor = GetCGPatternNamed(@"back2.png");//CGColorCreateGenericRGB(b,r,g,1.0f); 
-	backgroundLayer3.borderWidth=1.0;
-	backgroundLayer3.name = @"Mask";
-	backgroundLayer3.opacity = 0.98;
-	backgroundLayer3.masksToBounds   = YES;
-	[backgroundLayer addSublayer:backgroundLayer3];
-	 */
-	[CATransaction commit];
-	
-}
 
 //
 // createImageLayerForGameObject:
@@ -257,10 +225,15 @@ const double PLAYER_MAX_SPEED2 = 0.333;
     nextIndex = (nextIndex + 1) % kHistorySize;
 }	
 
+- (void)clearLogo:(NSTimer *)aTimer
+{
+	[logo setHidden:YES];
+}
 
 - (void)updateLevel2:(NSTimer *)aTimer
 {
-\	if(spawnCouner < 4) {
+//	NSLog(@"updateLevel2");
+	if(spawnCouner < 4) {
 //		[LittleDudeObject spawnNewAsteroidsReplacing:nil];
 		spawnCouner++;
 	}	
@@ -290,59 +263,80 @@ const double PLAYER_MAX_SPEED2 = 0.333;
 	
 }
 	
-- (void)updateLevel:(NSTimer *)aTimer
+
+- (void)MoveShipFromTouch:(CGPoint)startPos
 {
-}
-
-
+ 	PlayerObject* ship = [[[GameData sharedGameData] gameObjects] objectForKey:GAME_PLAYER_KEY];
+	
+	
+	//	NSLog(@"Start point x- %f, y- %f", startPos.x, startPos.y);
+	//	NSLog(@"End point x- %f, y- %f", ship.x, ship.y);
+	//double line_angle  = atan2(ship.y - startPos.y, ship.x - startPos.x) *  180/ M_PI;
+	double line_angle  = atan2(startPos.y - ship.y,startPos.x -  ship.x) *  180/ M_PI;
+	double radians = atan2(ship.y - startPos.y, ship.x - startPos.x);//atan2(startPos.y - ship.y,startPos.x -  ship.x);
+	//NSLog(@"Angle - %f", line_angle);
+	//NSLog(@"radians - %f", radians);
+	
+	radians= radians - (M_PI /2);
+	[GameData sharedGameData].upKeyDown = YES;
+	ship.angle = line_angle;
+	ship.layer.transform = CATransform3DMakeRotation(0, 0, 0, 1.0);
+	ship.layer.transform = CATransform3DMakeRotation(radians, 0, 0, 1.0);
+		
+}	
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	[[GameData sharedGameData] setShootKeyDown:YES];
+	[[GameData sharedGameData] endGame];
+	return;
+	
     UITouch *touch = touches.anyObject;
 	CGPoint startPos = [touch locationInView: self.view];
+	
+	[self MoveShipFromTouch:startPos];
+	
+	if([touch tapCount] > 1 ) {
+		[[GameData sharedGameData] setShootKeyDown:YES];
+	}
+	//	PlaySound(@"Pop");
 
-	NSString *collision = [[[GameData sharedGameData]
-							collideObjectsWithKeyPrefix:GAME_ASTEROID_KEY_BASE
-							withPoint:startPos]
-						   anyObject];
-	if (collision)
-	{
-		NSLog(@"Collision %@", collision);
-		[[GameData sharedGameData]  removeGameObjectForKey:collision];
-		PlaySound(@"Pop");
-
-		for (int i = 0; i < backgroundLayer.sublayers.count; i++) {
-			CALayer* layer = [backgroundLayer.sublayers objectAtIndex:i];
-			NSLog(@"Layer-%@-%@", layer, layer.name);
-			if( [layer.name isEqualToString:@"Mask"] ) {
-				if( layer.hidden != YES ) {
-					layer.hidden = YES;
-					return;
-				}
-			}
-		}
-					NSLog(@"Level Complete!");
-
-//					GGBLayer *front = [super createFront];
-					NSString *name = [NSString stringWithFormat: @"Level complete!"];
-					
-					
-#if TARGET_OS_IPHONE
-					UIFont *cornerFont = [UIFont boldSystemFontOfSize: 24];
-#else
-					NSFont *cornerFont = [NSFont boldSystemFontOfSize: 24];
-#endif
-					GGBTextLayer *label;
-					label = [GGBTextLayer textLayerInSuperlayer: backgroundLayer
-													   withText: name
-														   font: cornerFont
-													  alignment: kCALayerMaxXMargin | kCALayerBottomMargin];
-				
-	}			
 }
 
 
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+	CGPoint startPos = [touch locationInView: self.view];
+	
+	[self MoveShipFromTouch:startPos];
+}
+
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	
+	UITouch *touch = [touches anyObject];
+}	
+
+
+- (IBAction)newGame:(id)sender
+{
+	NSLog(@"new game !");
+	[buttonContainerView setHidden:YES];
+//	[contentView becomeFirstResponder];
+	
+	[[GameData sharedGameData] newGame];
+}
+
+
+//
+// gameEnded:
+//
+// Updates the UI for the out-of-game state.
+//
+- (IBAction)gameEnded:(id)sender
+{
+	[buttonContainerView setHidden:NO];
+}
 
 
 - (void)dealloc {

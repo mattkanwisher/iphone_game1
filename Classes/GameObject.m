@@ -29,6 +29,8 @@ const double GAME_OBJECT_BOUNDARY_EXCESS = 0.1;
 @synthesize imageName;
 @synthesize lastCollision;
 @synthesize layer;
+@synthesize diff_angle;
+@synthesize last_angle;
 
 const NSInteger GAME_LIVES = 3;
 const double GAME_ASPECT = 16.0 / 10.0;
@@ -64,6 +66,7 @@ const double GAME_HEIGHT=480;
 		trajectory = 0;
 		lastUpdateInterval = 0;
 		lastCollision = 0;
+		diff_angle = 0;
 	}
 
 	return self;

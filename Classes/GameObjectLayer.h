@@ -14,6 +14,7 @@
 @interface GameObjectLayer : ImageLayer
 {
 	NSString *gameObjectKey;
+	BOOL alternate;
 }
 
 - (id)initWithGameObjectKey:(NSString *)newGameObjectKey;
